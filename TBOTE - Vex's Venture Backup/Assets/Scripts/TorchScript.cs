@@ -296,7 +296,7 @@ public class TorchScript : MonoBehaviour {
             flame_26.SetActive(true);
             flame_light.range = 0;
             RenderSettings.fogEndDistance = 1.666f;
-
+            StartCoroutine("torchOut");
         }
     }
 
@@ -307,5 +307,12 @@ public class TorchScript : MonoBehaviour {
             yield return new WaitForSeconds(1);
             Diming_Rate--;
         }
+    }
+
+    IEnumerator torchOut()
+    {
+        yield return new WaitForSeconds(16);
+        flame_25.SetActive(false);
+        flame_26.SetActive(false);
     }
 }
