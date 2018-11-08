@@ -9,6 +9,7 @@ public class UseTorchScript : MonoBehaviour {
     void Start ()
     {
        anim = GetComponent<Animator>();
+       Time.timeScale = 1;
     }
 	
 	// Update is called once per frame

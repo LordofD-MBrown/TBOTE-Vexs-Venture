@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerClass : MonoBehaviour
 {
 
-    private bool torch = false;
+    private bool torch = true;
     private bool knife = false;
     private bool nightPotion = false;
 

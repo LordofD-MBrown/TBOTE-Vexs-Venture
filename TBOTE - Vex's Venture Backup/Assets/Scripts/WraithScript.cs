@@ -6,13 +6,17 @@ using UnityEngine.AI;
 public class WraithScript : MonoBehaviour {
 
     public GameObject player;
+
+    //PlayerMovement playerMovement;
     NavMeshAgent wraith;
     Animator anim;
 
-    bool IsWalking = false;
+    bool isWalking = false;
+    bool isAttacking = false;
 
     void Start ()
     {
+        //playerMovement = player.GetComponent<PlayerMovement>();
 		wraith = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
     }
@@ -22,13 +26,18 @@ public class WraithScript : MonoBehaviour {
 		wraith.destination = player.transform.position;
         if (transform.position != player.transform.position)
         {
-            IsWalking = true;
-            anim.SetBool("IsWalking", IsWalking);
+            isWalking = true;
+            anim.SetBool("IsWalking", isWalking);
         }
-        else
+    }
+
+    void OnCollisionEnter(Collision hit)
+    {
+        if(hit.gameObject == player)
         {
-            IsWalking = false;
-            anim.SetBool("IsWalking", IsWalking);
+            //isAttacking = true;
+            //anim.SetBool("IsAttacking", isAttacking);
+            //playerMovement.enabled = false;
         }
     }
 }

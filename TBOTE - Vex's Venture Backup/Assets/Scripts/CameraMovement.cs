@@ -24,6 +24,15 @@ public class CameraMovement : MonoBehaviour
         leftRight += speedLeftRight * Input.GetAxis("Mouse X");
         upDown += speedUpDown * Input.GetAxis("Mouse Y");
 
+        if(upDown > 60)
+        {
+            upDown = 60;
+        }
+        else if(upDown < -60)
+        {
+            upDown = -60;
+        }
+
         character.transform.eulerAngles = new Vector3(0f, leftRight, 0f);
     }
 
