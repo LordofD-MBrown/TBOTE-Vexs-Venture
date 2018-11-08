@@ -8,17 +8,18 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = 30f;
     public Vector3 move = Vector3.zero;
     CharacterController controller;
-    // Use this for initialization
+    PlayerClass player;
+
     void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
+        player = gameObject.GetComponent<PlayerClass>();
     }
 
     // Update is called once per frame
     void Update()
     {
         movePlayer();
-
     }
 
     void movePlayer()
