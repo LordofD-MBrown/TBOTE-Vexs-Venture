@@ -7,6 +7,10 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public float gravity = 30f;
     public Vector3 move = Vector3.zero;
+
+    public GameObject camera;
+
+    JumpScareWraith jumpScare;
     CharacterController controller;
     PlayerClass player;
 
@@ -14,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         player = gameObject.GetComponent<PlayerClass>();
+        jumpScare = camera.GetComponent<JumpScareWraith>();
     }
 
     // Update is called once per frame
@@ -34,6 +39,15 @@ public class PlayerMovement : MonoBehaviour
         move.y -= gravity * Time.deltaTime;
 
         controller.Move(move * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider hit)
+    {
+        if (hit.gameObject.tag == "Wraith")
+        {
+            jumpScare.enabled = true;
+            Destroy(hit);
+        }
     }
 
 }
