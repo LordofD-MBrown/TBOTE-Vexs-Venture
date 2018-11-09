@@ -5,20 +5,21 @@ using UnityEngine.AI;
 
 public class WraithScript : MonoBehaviour {
 
-    public GameObject player;
-    public GameObject camera;
+    GameObject player;
+    GameObject camera;
     public GameObject wraith;
 
     NavMeshAgent wraithMovement;
     Animator anim;
 
     bool isWalking = false;
-    bool isAttacking = false;
 
     void Start ()
     {
 		wraithMovement = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        player = GameObject.Find("Player");
+        camera = GameObject.Find("FP System");
     }
 	
 	void Update ()

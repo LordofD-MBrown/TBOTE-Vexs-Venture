@@ -6,26 +6,21 @@ using UnityEngine;
 public class JumpScareWraith : MonoBehaviour {
 
     public GameObject player;
-    public GameObject camera;
     public GameObject wraith;
+    public GameObject torch;
 
-    CameraMovement cameraMovement;
     PlayerMovement playerMovement;
 
     int randomNumber;
 
 	void Start ()
     {
-        cameraMovement = camera.GetComponent<CameraMovement>();
         playerMovement = player.GetComponent<PlayerMovement>();
-    }
 
-	void Update ()
-    {
-        cameraMovement.enabled = false;
         playerMovement.enabled = false;
+        torch.SetActive(false);
         StartCoroutine("JumpScareTimmer");
-	}
+    }
 
     IEnumerator JumpScareTimmer()
     {
@@ -33,4 +28,5 @@ public class JumpScareWraith : MonoBehaviour {
         yield return new WaitForSeconds(randomNumber);
         wraith.gameObject.SetActive(true);
     }
+
 }

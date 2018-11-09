@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject camera;
 
-    JumpScareWraith jumpScare;
+    JumpScareWraith jumpScareWraith;
     CharacterController controller;
     PlayerClass player;
 
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         player = gameObject.GetComponent<PlayerClass>();
-        jumpScare = camera.GetComponent<JumpScareWraith>();
+        jumpScareWraith = camera.GetComponent<JumpScareWraith>();
     }
 
     // Update is called once per frame
@@ -41,12 +41,12 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider hit)
+     void OnTriggerEnter(Collider other)
     {
-        if (hit.gameObject.tag == "Wraith")
+        if (other.gameObject.tag == "Wraith")
         {
-            jumpScare.enabled = true;
-            Destroy(hit);
+            jumpScareWraith.enabled = true;
+            Destroy(other.gameObject);
         }
     }
 
