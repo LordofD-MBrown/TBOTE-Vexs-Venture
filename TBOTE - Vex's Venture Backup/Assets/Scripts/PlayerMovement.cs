@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Wraith")
         {
+            RenderSettings.fogEndDistance = 3;
             jumpScareWraith.enabled = true;
             Destroy(other.gameObject);
         }

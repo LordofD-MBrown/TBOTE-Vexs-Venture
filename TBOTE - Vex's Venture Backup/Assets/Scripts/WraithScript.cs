@@ -31,6 +31,22 @@ public class WraithScript : MonoBehaviour {
             anim.SetBool("IsWalking", isWalking);
         }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Torch")
+        {
+            wraithMovement.enabled = false;
+            anim.SetBool("IsDying", true);
+            StartCoroutine("WraithDeath");
+            
+        }
+    }
 
-    
+    IEnumerator WraithDeath()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
+    }
+
+
 }
