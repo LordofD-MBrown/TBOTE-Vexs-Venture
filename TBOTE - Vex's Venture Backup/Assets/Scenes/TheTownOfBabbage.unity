@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.34653687, g: 0.34469125, b: 0.30811092, a: 1}
+  m_IndirectSpecularColor: {r: 0.34653696, g: 0.3446913, b: 0.3081109, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19187,6 +19187,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f,
     type: 2}
   m_PrefabInternal: {fileID: 1814590964}
+--- !u!1 &123445894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2046168034}
 --- !u!4 &141302629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f,
@@ -19246,6 +19251,10 @@ Prefab:
     - target: {fileID: 167730, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
       propertyPath: m_Name
       value: NightVision (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 167730, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
@@ -19524,6 +19533,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f,
     type: 2}
   m_PrefabInternal: {fileID: 1597128427}
+--- !u!1 &176826442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2033288764}
 --- !u!108 &183676790 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 10852728, guid: 731670d05affd0045a25600d2045889f,
@@ -20873,6 +20887,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f,
     type: 2}
   m_PrefabInternal: {fileID: 1977866825}
+--- !u!1 &493475907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1741932932}
 --- !u!1001 &496556936
 Prefab:
   m_ObjectHideFlags: 0
@@ -21181,6 +21200,7 @@ MonoBehaviour:
   gravity: 30
   move: {x: 0, y: 0, z: 0}
   camera: {fileID: 2056763682}
+  torch: {fileID: 0}
 --- !u!114 &524685943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73704,6 +73724,10 @@ Prefab:
       propertyPath: m_Name
       value: knife_unity (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
   m_IsPrefabAsset: 0
@@ -74764,6 +74788,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731670d05affd0045a25600d2045889f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &939128019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a,
+    type: 2}
+  m_PrefabInternal: {fileID: 833261420}
 --- !u!1001 &942092204
 Prefab:
   m_ObjectHideFlags: 0
@@ -75683,6 +75712,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f,
     type: 2}
   m_PrefabInternal: {fileID: 1159082713}
+--- !u!1 &1165883631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1902285196}
 --- !u!1001 &1166698616
 Prefab:
   m_ObjectHideFlags: 0
@@ -85702,6 +85736,10 @@ Prefab:
       propertyPath: m_Name
       value: NightVision (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 167730, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
   m_IsPrefabAsset: 0
@@ -85718,6 +85756,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1337776042}
+  - component: {fileID: 1337776043}
   m_Layer: 0
   m_Name: Knife spawn points
   m_TagString: Untagged
@@ -85744,6 +85783,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1337776043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1337776041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7e5c98681b59842a958d6c621f494f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnifePos1: {fileID: 493475907}
+  KnifePos2: {fileID: 939128019}
+  KnifePos3: {fileID: 1835803754}
+  KnifePos4: {fileID: 176826442}
+  KnifePos5: {fileID: 1165883631}
+  KnifePos6: {fileID: 123445894}
 --- !u!1 &1355306296 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 115752, guid: 731670d05affd0045a25600d2045889f,
@@ -85760,6 +85816,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac1fdf6de5b2894580c384a4d862de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  torchCollider: {fileID: 0}
+  torchLight: {fileID: 0}
 --- !u!114 &1355306298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95578,6 +95637,10 @@ Prefab:
     - target: {fileID: 167730, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
       propertyPath: m_Name
       value: NightVision (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 167730, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
@@ -110892,6 +110955,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -3.0080001
       objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
   m_IsPrefabAsset: 0
@@ -115666,6 +115733,10 @@ Prefab:
       propertyPath: m_Name
       value: NightVision
       objectReference: {fileID: 0}
+    - target: {fileID: 167730, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
   m_IsPrefabAsset: 0
@@ -120353,6 +120424,10 @@ Prefab:
       propertyPath: m_Name
       value: NightVision (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 167730, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7769a5ff77d804234bfa1b1a22904922, type: 2}
   m_IsPrefabAsset: 0
@@ -120529,6 +120604,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 731670d05affd0045a25600d2045889f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1835803754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2018124444}
 --- !u!4 &1838314401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f,
@@ -121116,6 +121196,10 @@ Prefab:
     - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
       propertyPath: m_Name
       value: knife_unity (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
@@ -131258,6 +131342,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
   m_IsPrefabAsset: 0
@@ -131424,6 +131512,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
   m_IsPrefabAsset: 0
@@ -131503,6 +131595,10 @@ Prefab:
     - target: {fileID: 4988576087518800, guid: d2959226abee63e42afe64c17736919a, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 17.118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
