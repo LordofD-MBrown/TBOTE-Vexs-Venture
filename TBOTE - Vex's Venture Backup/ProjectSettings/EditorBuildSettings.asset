@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TS-Michael.unity
+    guid: a111c9ab875f0954d8ac64acd4a86f54
+  - enabled: 1
     path: Assets/Scenes/TheTownOfBabbage.unity
     guid: 248ae7e2aa4c9a044882b686d60e6a38
   - enabled: 1
