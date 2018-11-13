@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UseTorchScript : MonoBehaviour {
+
+    PlayerClass player;
     Animator anim;
     bool in_use;
 
+    public GameObject playerObject;
     public GameObject torchCollider;
     public Light torchLight;
 
     void Start ()
     {
+       player = playerObject.GetComponent<PlayerClass>();
        anim = GetComponent<Animator>();
        Time.timeScale = 1;
     }
@@ -23,6 +27,10 @@ public class UseTorchScript : MonoBehaviour {
             StartCoroutine("waitForTorchUse");
             in_use = true;
             anim.SetBool("LeftClick", in_use);
+            for(int i = 0; i <10; i++)
+            {
+                player.DimmingofTorch();
+            }
         }
 	}
 

@@ -7,9 +7,12 @@ public class WraithScript : MonoBehaviour {
 
     GameObject player;
     GameObject camera;
+    GameObject wraithSpawning;
+
     public GameObject wraith;
 
     NavMeshAgent wraithMovement;
+    WraithSpawn wraithSpawn;
     Animator anim;
 
     bool isWalking = false;
@@ -20,6 +23,8 @@ public class WraithScript : MonoBehaviour {
         anim = GetComponent<Animator>();
         player = GameObject.Find("Player");
         camera = GameObject.Find("FP System");
+        wraithSpawning = GameObject.Find("WraithGod");
+        wraithSpawn = wraithSpawning.GetComponent<WraithSpawn>();
     }
 	
 	void Update ()
@@ -45,6 +50,7 @@ public class WraithScript : MonoBehaviour {
     IEnumerator WraithDeath()
     {
         yield return new WaitForSeconds(2f);
+        wraithSpawn.WraithDeath();
         Destroy(gameObject);
     }
 
