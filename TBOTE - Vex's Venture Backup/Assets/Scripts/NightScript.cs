@@ -8,8 +8,12 @@ public class NightScript : MonoBehaviour {
 	void Start ()
     {
         RenderSettings.fog = true;
-        RenderSettings.fogDensity = 5;
 	}
+
+    void Update()
+    {
+        RenderSettings.fog = true;
+    }
 
 
 

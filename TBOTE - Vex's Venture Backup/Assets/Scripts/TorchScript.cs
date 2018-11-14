@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TorchScript : MonoBehaviour {
 
     PlayerClass player;
     int Diming_Rate;
+    int baseLight;
 
     //Public GameObjects=====
     public GameObject playerObject;
@@ -63,7 +65,12 @@ public class TorchScript : MonoBehaviour {
 
     void LateUpdate ()
     {
-        if(player.GetTorch() == true)
+        if(SceneManager.GetActiveScene().name == "TheTownOfBabbage")
+        {
+            baseLight = 50;
+            RenderSettings.fogEndDistance = baseLight;
+        }
+        if (player.GetTorch() == true)
         {
             if (player.GetTorchLife() <= 400 && player.GetTorchLife() >= 385)
             {
@@ -289,7 +296,11 @@ public class TorchScript : MonoBehaviour {
                 StartCoroutine("torchOut");
                 ClearTorches();
             }
-        } 
+        }
+        if (SceneManager.GetActiveScene().name == "TheTownOfBabbage")
+        {
+            RenderSettings.fogEndDistance = baseLight;
+        }
     }
 
     IEnumerator torchDim()
