@@ -49,6 +49,10 @@ public class PlayerMovement : MonoBehaviour
                 death = true;
                 torch.SetActive(false);
                 RenderSettings.fogEndDistance = 3f;
+
+                //Michael - Testing GameOver script - BEGINNING
+                FindObjectOfType<RestartGame>().GameOver();
+                //Michael - Testing GameOver script - END
             }
             fallingDistance = 0;
         }
