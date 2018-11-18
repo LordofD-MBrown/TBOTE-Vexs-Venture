@@ -12,11 +12,13 @@ public class KnifeSpawn : MonoBehaviour
     public GameObject KnifePos6;
 
     Random rnd = new Random();
+
+    
     
     // Use this for initialization
     void Start ()
     {
-        int getPos = Random.Range(0, 7);
+        int getPos = Random.Range(0, 6);
 
         if (getPos == 0)
         {
@@ -49,4 +51,6 @@ public class KnifeSpawn : MonoBehaviour
     {
 		
 	}
+
+    
 }
