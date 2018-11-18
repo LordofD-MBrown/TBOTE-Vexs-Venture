@@ -8,6 +8,7 @@ public class PlayerClass : MonoBehaviour
     private bool torch = true;
     private bool knife = false;
     private bool nightPotion = false;
+    private bool inAnim = false;
 
     private int torchLife = 400;
 
@@ -28,6 +29,10 @@ public class PlayerClass : MonoBehaviour
     {
         torchLife = t_torchLife;
     }
+    public void SetInAnim(bool t_inAnim)
+    {
+        inAnim = t_inAnim;
+    }
     //===================================================
 
     
@@ -47,6 +52,10 @@ public class PlayerClass : MonoBehaviour
     public int GetTorchLife()
     {
         return torchLife;
+    }
+    public bool GetInAnim()
+    {
+        return inAnim;
     }
     //===================================================
 

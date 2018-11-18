@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject camera;
     public GameObject torch;
+    public GameObject knife;
 
     JumpScareWraith jumpScareWraith;
     CharacterController controller;
@@ -48,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
                 cameraMovement.enabled = false;
                 death = true;
                 torch.SetActive(false);
+                knife.SetActive(false);
+                
                 RenderSettings.fogEndDistance = 3f;
 
                 //Michael - Testing GameOver script - BEGINNING

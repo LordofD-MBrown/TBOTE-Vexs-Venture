@@ -16,6 +16,7 @@ public class WraithScript : MonoBehaviour {
     Animator anim;
 
     bool isWalking = false;
+    bool death = false;
 
     void Start ()
     {
@@ -29,11 +30,15 @@ public class WraithScript : MonoBehaviour {
 	
 	void Update ()
     {
-		wraithMovement.destination = player.transform.position;
-        if (transform.position != player.transform.position)
+        if (death == false)
         {
-            isWalking = true;
-            anim.SetBool("IsWalking", isWalking);
+            wraithMovement.destination = player.transform.position;
+            wraithMovement.speed = 5;
+            if (transform.position != player.transform.position)
+            {
+                isWalking = true;
+                anim.SetBool("IsWalking", isWalking);
+            }
         }
     }
     void OnTriggerEnter(Collider other)
@@ -41,6 +46,7 @@ public class WraithScript : MonoBehaviour {
         if (other.gameObject.tag == "Torch")
         {
             wraithMovement.enabled = false;
+            death = true;
             anim.SetBool("IsDying", true);
             StartCoroutine("WraithDeath");
             
@@ -49,7 +55,7 @@ public class WraithScript : MonoBehaviour {
 
     IEnumerator WraithDeath()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         wraithSpawn.WraithDeath();
         Destroy(gameObject);
     }

@@ -22,20 +22,21 @@ public class UseTorchScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (in_use == false && Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine("waitForTorchUse");
-            in_use = true;
-            anim.SetBool("LeftClick", in_use);
-            for(int i = 0; i <10; i++)
+            if (in_use == false && Input.GetMouseButtonDown(0))
             {
-                player.DimmingofTorch();
+                StartCoroutine("waitForTorchUse");
+                in_use = true;
+                anim.SetBool("LeftClick", in_use);
+                for (int i = 0; i < 10; i++)
+                {
+                    player.DimmingofTorch();
+                }
             }
-        }
 	}
 
     IEnumerator waitForTorchUse()
     {
+        player.SetInAnim(true);
         if (torchLight.range > 0)
         {
             torchCollider.SetActive(true);
@@ -49,6 +50,7 @@ public class UseTorchScript : MonoBehaviour {
         {
             torchCollider.SetActive(false);
         }
+        player.SetInAnim(false);
        
     }
 }

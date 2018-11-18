@@ -8,6 +8,7 @@ public class JumpScareWraith : MonoBehaviour {
     public GameObject player;
     public GameObject wraith;
     public GameObject torch;
+    public GameObject knife;
 
     PlayerMovement playerMovement;
 
@@ -19,6 +20,8 @@ public class JumpScareWraith : MonoBehaviour {
 
         playerMovement.enabled = false;
         torch.SetActive(false);
+        knife.SetActive(false);
+
         StartCoroutine("JumpScareTimmer");
     }
 
