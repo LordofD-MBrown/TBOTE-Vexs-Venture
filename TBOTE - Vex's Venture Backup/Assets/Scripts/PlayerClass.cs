@@ -6,7 +6,7 @@ public class PlayerClass : MonoBehaviour
 {
 
     private bool torch = true;
-    private bool knife = false;
+    private bool knife = true;
     private bool nightPotion = false;
     private bool inAnim = false;
 
