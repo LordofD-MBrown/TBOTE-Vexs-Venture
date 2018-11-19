@@ -8,7 +8,7 @@ public class BookKnifeScript : MonoBehaviour
 
     TheDarkOneAI AI;
 
-    int numberOfStabs = 0;
+    int numberOfStabs = 1;
 
 	void Start ()
     {
@@ -29,6 +29,10 @@ public class BookKnifeScript : MonoBehaviour
             {
                 AI.CheckPlayerKnifeTome(true);
                 numberOfStabs++;
+            }
+            else if(numberOfStabs == 3)
+            {
+                AI.GetTheDarkOneDeath(true);
             }
         }
     }
