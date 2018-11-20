@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class KnifePickUp : MonoBehaviour
 {
-    public GameObject playerKnife;
+    public GameObject player;
+
+    PlayerClass playerinfo;
+
     // Use this for initialization
-    void Start () {
-		
+    void Start ()
+    {
+        playerinfo = player.GetComponent<PlayerClass>();
 	}
 	
 	// Update is called once per frame
@@ -20,7 +24,7 @@ public class KnifePickUp : MonoBehaviour
         string name = other.gameObject.name;
         if (name == "Player")
         {
-            playerKnife.SetActive(true);
+            playerinfo.SetKnife(true);
             Destroy(gameObject);
         }
     }

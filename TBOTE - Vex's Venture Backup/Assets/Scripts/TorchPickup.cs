@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class TorchPickup : MonoBehaviour
 {
-    public GameObject playerTorch;
+    public GameObject player;
+
+    PlayerClass playerinfo;
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        playerinfo = player.GetComponent<PlayerClass>();
 	}
 	
 	// Update is called once per frame
@@ -23,8 +25,7 @@ public class TorchPickup : MonoBehaviour
         string name = other.gameObject.name;
         if (name == "Player")
         {
-            playerTorch.SetActive(true);
-
+            playerinfo.SetTorch(true);
             Destroy(gameObject);
         }
     }

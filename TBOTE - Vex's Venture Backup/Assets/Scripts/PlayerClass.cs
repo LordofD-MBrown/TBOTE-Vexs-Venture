@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerClass : MonoBehaviour
 {
 
-    private bool torch = true;
-    private bool knife = true;
+    private bool torch = false;
+    private bool knife = false;
     private bool nightPotion = false;
     private bool inAnim = false;
 
