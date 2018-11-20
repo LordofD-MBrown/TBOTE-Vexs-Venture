@@ -79,6 +79,14 @@ public class PlayerMovement : MonoBehaviour
             jumpScareWraith.enabled = true;
             Destroy(other.gameObject);
         }
+        if (other.gameObject.tag == "TheDarkOne")
+        {
+            anim.SetBool("IsDying", true);
+            cameraMovement.enabled = false;
+            death = true;
+            torch.SetActive(false);
+            knife.SetActive(false);
+        }
     }
 
 }

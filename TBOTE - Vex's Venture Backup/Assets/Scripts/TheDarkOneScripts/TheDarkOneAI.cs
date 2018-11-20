@@ -52,7 +52,7 @@ public class TheDarkOneAI : MonoBehaviour {
                 {
                     isMelee = true;
                     StartCoroutine("TheDarkOneMelee");
-                    StartCoroutine("TheDarkOneMeleeDamage");
+                    StartCoroutine("TheDarkLordMeleeDamage");
                 }
                 else if (playerInMeleeRange == false)
                 {
@@ -133,15 +133,15 @@ public class TheDarkOneAI : MonoBehaviour {
     IEnumerator TheDarkOneMelee()
     {
         activeAnimation = true;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         activeAnimation = false;
     }
 
     IEnumerator TheDarkLordMeleeDamage()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         MeleeAttack.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         MeleeAttack.SetActive(false);
     }
 
@@ -161,7 +161,7 @@ public class TheDarkOneAI : MonoBehaviour {
 
     IEnumerator TheDarkOneRangeDamage()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         RangeAttack.SetActive(true);
         yield return new WaitForSeconds(2f);
         RangeAttack.SetActive(false);
