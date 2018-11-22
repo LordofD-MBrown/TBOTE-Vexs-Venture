@@ -7,7 +7,8 @@ public class TorchScript : MonoBehaviour {
 
     PlayerClass player;
     int Diming_Rate;
-    int baseLight;
+    float baseLight;
+    bool forest = false;
 
     //Public GameObjects=====
     public GameObject playerObject;
@@ -67,9 +68,21 @@ public class TorchScript : MonoBehaviour {
     {
         if(SceneManager.GetActiveScene().name == "TheTownOfBabbage")
         {
+            forest = false;
             baseLight = 50;
             RenderSettings.fogEndDistance = baseLight;
         }
+        else if(SceneManager.GetActiveScene().name == "TheVerionianForest(Right)")
+        {
+            forest = true;
+            baseLight = .15f;
+            RenderSettings.fogDensity = baseLight;
+        }
+        else
+        {
+            forest = false;
+        }
+
         if (player.GetTorch() == true)
         {
             if (player.GetTorchLife() <= 400 && player.GetTorchLife() >= 385)
@@ -77,7 +90,14 @@ public class TorchScript : MonoBehaviour {
                 flame_0.SetActive(true);
                 flame_1.SetActive(true);
                 flame_light.range = 25;
-                RenderSettings.fogEndDistance = 10f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .06f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 10f;
+                }
             }
             else if (player.GetTorchLife() <= 384 && player.GetTorchLife() >= 369)
             {
@@ -85,7 +105,14 @@ public class TorchScript : MonoBehaviour {
                 flame_1.SetActive(true);
                 flame_2.SetActive(true);
                 flame_light.range = 24;
-                RenderSettings.fogEndDistance = 9.666f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .06333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 9.666f;
+                }
             }
             else if (player.GetTorchLife() <= 368 && player.GetTorchLife() >= 353)
             {
@@ -93,7 +120,14 @@ public class TorchScript : MonoBehaviour {
                 flame_2.SetActive(true);
                 flame_3.SetActive(true);
                 flame_light.range = 23;
-                RenderSettings.fogEndDistance = 9.333f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .06666f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 9.333f;
+                }
             }
             else if (player.GetTorchLife() <= 352 && player.GetTorchLife() >= 337)
             {
@@ -101,7 +135,14 @@ public class TorchScript : MonoBehaviour {
                 flame_3.SetActive(true);
                 flame_4.SetActive(true);
                 flame_light.range = 22;
-                RenderSettings.fogEndDistance = 9f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .07f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 9f;
+                }
             }
             else if (player.GetTorchLife() <= 336 && player.GetTorchLife() >= 321)
             {
@@ -109,7 +150,14 @@ public class TorchScript : MonoBehaviour {
                 flame_4.SetActive(true);
                 flame_5.SetActive(true);
                 flame_light.range = 21;
-                RenderSettings.fogEndDistance = 8.666f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .07333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 8.666f;
+                }
             }
             else if (player.GetTorchLife() <= 320 && player.GetTorchLife() >= 305)
             {
@@ -117,7 +165,14 @@ public class TorchScript : MonoBehaviour {
                 flame_5.SetActive(true);
                 flame_6.SetActive(true);
                 flame_light.range = 20;
-                RenderSettings.fogEndDistance = 8.333f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .08f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 8.333f;
+                }
             }
             else if (player.GetTorchLife() <= 304 && player.GetTorchLife() >= 289)
             {
@@ -125,7 +180,14 @@ public class TorchScript : MonoBehaviour {
                 flame_6.SetActive(true);
                 flame_7.SetActive(true);
                 flame_light.range = 19;
-                RenderSettings.fogEndDistance = 8f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .08333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 8f;
+                }
             }
             else if (player.GetTorchLife() <= 288 && player.GetTorchLife() >= 273)
             {
@@ -133,7 +195,14 @@ public class TorchScript : MonoBehaviour {
                 flame_7.SetActive(true);
                 flame_8.SetActive(true);
                 flame_light.range = 18;
-                RenderSettings.fogEndDistance = 7.666f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .08666f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 7.666f;
+                }
             }
             else if (player.GetTorchLife() <= 272 && player.GetTorchLife() >= 257)
             {
@@ -141,7 +210,14 @@ public class TorchScript : MonoBehaviour {
                 flame_8.SetActive(true);
                 flame_9.SetActive(true);
                 flame_light.range = 17;
-                RenderSettings.fogEndDistance = 7.333f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .09f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 7.333f;
+                }
             }
             else if (player.GetTorchLife() <= 256 && player.GetTorchLife() >= 241)
             {
@@ -149,7 +225,14 @@ public class TorchScript : MonoBehaviour {
                 flame_9.SetActive(true);
                 flame_10.SetActive(true);
                 flame_light.range = 16;
-                RenderSettings.fogEndDistance = 7f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .09333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 7f;
+                }
             }
             else if (player.GetTorchLife() <= 240 && player.GetTorchLife() >= 225)
             {
@@ -157,8 +240,14 @@ public class TorchScript : MonoBehaviour {
                 flame_10.SetActive(true);
                 flame_11.SetActive(true);
                 flame_light.range = 15;
-                RenderSettings.fogEndDistance = 6.666f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .09666f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 6.666f;
+                }
             }
             else if (player.GetTorchLife() <= 224 && player.GetTorchLife() >= 209)
             {
@@ -166,8 +255,14 @@ public class TorchScript : MonoBehaviour {
                 flame_11.SetActive(true);
                 flame_12.SetActive(true);
                 flame_light.range = 14;
-                RenderSettings.fogEndDistance = 6.333f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .10f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 6.333f;
+                }
             }
             else if (player.GetTorchLife() <= 208 && player.GetTorchLife() >= 193)
             {
@@ -175,8 +270,14 @@ public class TorchScript : MonoBehaviour {
                 flame_12.SetActive(true);
                 flame_13.SetActive(true);
                 flame_light.range = 13;
-                RenderSettings.fogEndDistance = 6f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .10333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 6f;
+                }           
             }
             else if (player.GetTorchLife() <= 192 && player.GetTorchLife() >= 177)
             {
@@ -184,8 +285,14 @@ public class TorchScript : MonoBehaviour {
                 flame_13.SetActive(true);
                 flame_14.SetActive(true);
                 flame_light.range = 12;
-                RenderSettings.fogEndDistance = 5.666f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .10666f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 5.666f;
+                }
             }
             else if (player.GetTorchLife() <= 176 && player.GetTorchLife() >= 161)
             {
@@ -193,8 +300,14 @@ public class TorchScript : MonoBehaviour {
                 flame_14.SetActive(true);
                 flame_15.SetActive(true);
                 flame_light.range = 11;
-                RenderSettings.fogEndDistance = 5.333f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .11f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 5.333f;
+                }
             }
             else if (player.GetTorchLife() <= 160 && player.GetTorchLife() >= 145)
             {
@@ -202,8 +315,14 @@ public class TorchScript : MonoBehaviour {
                 flame_15.SetActive(true);
                 flame_16.SetActive(true);
                 flame_light.range = 10;
-                RenderSettings.fogEndDistance = 5f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .11333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 5f;
+                }
             }
             else if (player.GetTorchLife() <= 144 && player.GetTorchLife() >= 129)
             {
@@ -211,8 +330,14 @@ public class TorchScript : MonoBehaviour {
                 flame_16.SetActive(true);
                 flame_17.SetActive(true);
                 flame_light.range = 9;
-                RenderSettings.fogEndDistance = 4.666f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .11666f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 4.666f;
+                }
             }
             else if (player.GetTorchLife() <= 128 && player.GetTorchLife() >= 113)
             {
@@ -220,8 +345,14 @@ public class TorchScript : MonoBehaviour {
                 flame_17.SetActive(true);
                 flame_18.SetActive(true);
                 flame_light.range = 8;
-                RenderSettings.fogEndDistance = 4.333f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .12f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 4.333f;
+                }
             }
             else if (player.GetTorchLife() <= 112 && player.GetTorchLife() >= 97)
             {
@@ -229,8 +360,14 @@ public class TorchScript : MonoBehaviour {
                 flame_18.SetActive(true);
                 flame_19.SetActive(true);
                 flame_light.range = 7;
-                RenderSettings.fogEndDistance = 4f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .12333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 4f;
+                }
             }
             else if (player.GetTorchLife() <= 96 && player.GetTorchLife() >= 81)
             {
@@ -238,7 +375,14 @@ public class TorchScript : MonoBehaviour {
                 flame_19.SetActive(true);
                 flame_20.SetActive(true);
                 flame_light.range = 6;
-                RenderSettings.fogEndDistance = 3.666f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .12666f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 3.666f;
+                }
 
             }
             else if (player.GetTorchLife() <= 80 && player.GetTorchLife() >= 65)
@@ -247,8 +391,14 @@ public class TorchScript : MonoBehaviour {
                 flame_20.SetActive(true);
                 flame_21.SetActive(true);
                 flame_light.range = 5;
-                RenderSettings.fogEndDistance = 3.333f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .13f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 3.333f;
+                }
             }
             else if (player.GetTorchLife() <= 64 && player.GetTorchLife() >= 49)
             {
@@ -256,7 +406,14 @@ public class TorchScript : MonoBehaviour {
                 flame_21.SetActive(true);
                 flame_22.SetActive(true);
                 flame_light.range = 4;
-                RenderSettings.fogEndDistance = 3f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .13333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 3f;
+                }
 
             }
             else if (player.GetTorchLife() <= 48 && player.GetTorchLife() >= 33)
@@ -265,8 +422,14 @@ public class TorchScript : MonoBehaviour {
                 flame_22.SetActive(true);
                 flame_23.SetActive(true);
                 flame_light.range = 3;
-                RenderSettings.fogEndDistance = 2.666f;
-
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .13666f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 2.666f;
+                }
             }
             else if (player.GetTorchLife() <= 32 && player.GetTorchLife() >= 17)
             {
@@ -274,7 +437,14 @@ public class TorchScript : MonoBehaviour {
                 flame_23.SetActive(true);
                 flame_24.SetActive(true);
                 flame_light.range = 2;
-                RenderSettings.fogEndDistance = 2.333f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .14f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 2.333f;
+                }
 
             }
             else if (player.GetTorchLife() <= 16 && player.GetTorchLife() >= 1)
@@ -283,7 +453,14 @@ public class TorchScript : MonoBehaviour {
                 flame_24.SetActive(true);
                 flame_25.SetActive(true);
                 flame_light.range = 1;
-                RenderSettings.fogEndDistance = 2f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .14333f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 2f;
+                }
 
             }
             else if (player.GetTorchLife() == 0)
@@ -292,7 +469,14 @@ public class TorchScript : MonoBehaviour {
                 flame_25.SetActive(true);
                 flame_26.SetActive(true);
                 flame_light.range = 0;
-                RenderSettings.fogEndDistance = 1.666f;
+                if (forest == true)
+                {
+                    RenderSettings.fogDensity = .14666f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 1.666f;
+                }
                 StartCoroutine("torchOut");
                 ClearTorches();
             }

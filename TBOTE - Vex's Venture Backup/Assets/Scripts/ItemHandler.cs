@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemHandler : MonoBehaviour {
 
@@ -42,9 +43,21 @@ public class ItemHandler : MonoBehaviour {
                 knife.SetActive(true);
                 Debug.Log("Knife");
             }
+
             else
             {
-                RenderSettings.fogEndDistance = 2;
+                if (SceneManager.GetActiveScene().name == "TheTownOfBabbage")
+                {
+                    RenderSettings.fogEndDistance = 50f;
+                }
+                else if(SceneManager.GetActiveScene().name == "TheVerionianForest(Right)")
+                {
+                    RenderSettings.fogDensity = .15f;
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = 1.666f;
+                }
                 turnOffItems();
                 currentItem = 0;
             }
