@@ -37,11 +37,13 @@ public class UseKnife : MonoBehaviour
     IEnumerator waitForKnifeUse()
     {
         player.SetInAnim(true);
+        knifeColider.SetActive(true);
 
         yield return new WaitForSeconds(1f);
         in_use = false;
         anim.SetBool("IsAttacking", in_use);
 
+        knifeColider.SetActive(false);
         player.SetInAnim(false);
     }
 }
