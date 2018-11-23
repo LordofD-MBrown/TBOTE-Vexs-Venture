@@ -12,7 +12,7 @@ public class NightScript : MonoBehaviour {
 
     void Update()
     {
-        RenderSettings.fog = true;
+        //RenderSettings.fog = true;
     }
 
 

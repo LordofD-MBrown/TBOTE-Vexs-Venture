@@ -1,47 +1,45 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class UseKnife : MonoBehaviour
+public class DrinkPotion : MonoBehaviour
 {
     PlayerClass player;
     Animator anim;
     bool in_use;
 
     public GameObject playerObject;
-    public GameObject knifeColider;
-
-    // Use this for initialization
     void Start ()
     {
         player = playerObject.GetComponent<PlayerClass>();
         anim = GetComponent<Animator>();
         Time.timeScale = 1;
-        
     }
-	
-	// Update is called once per frame
+
 	void Update ()
     {
-        RenderSettings.fogEndDistance = 2;
-        if (player.GetKnife() == true)
+        
+        if (player.GetNightPotion() == true)
         {
             if (in_use == false && Input.GetMouseButtonDown(0))
             {
-                StartCoroutine("waitForKnifeUse");
+                StartCoroutine("waitForDrinkUse");
                 in_use = true;
-                anim.SetBool("IsAttacking", in_use);
+                anim.SetBool("IsDrinking", in_use);
             }
         }
     }
 
-    IEnumerator waitForKnifeUse()
+    IEnumerator waitForDrinkUse()
     {
         player.SetInAnim(true);
 
         yield return new WaitForSeconds(1f);
+        player.usePotion();
         in_use = false;
-        anim.SetBool("IsAttacking", in_use);
+        anim.SetBool("IsDrinking", in_use);
 
         player.SetInAnim(false);
+        gameObject.SetActive(false);
     }
 }

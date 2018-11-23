@@ -7,8 +7,9 @@ public class PlayerClass : MonoBehaviour
 
     private bool torch = false;
     private bool knife = false;
-    private bool nightPotion = false;
+    private bool nightPotion = true;
     private bool inAnim = false;
+    private float duration_of_potion = 10f;
 
     private int torchLife = 400;
 
@@ -62,6 +63,25 @@ public class PlayerClass : MonoBehaviour
     public void DimmingofTorch()
     {
         torchLife--;
+    }
+
+    public void GrabPotion()
+    {
+        nightPotion = true;
+        duration_of_potion += 10f;
+    }
+
+    public void usePotion()
+    {
+        StartCoroutine("PotionLength");  
+    }
+
+    IEnumerator PotionLength()
+    {
+        nightPotion = false;
+        RenderSettings.fog = false;
+        yield return new WaitForSeconds(duration_of_potion);
+        RenderSettings.fog = true;
     }
 
 

@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject camera;
     public GameObject torch;
     public GameObject knife;
+    public GameObject potion;
 
     JumpScareWraith jumpScareWraith;
     CharacterController controller;
@@ -86,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
             death = true;
             torch.SetActive(false);
             knife.SetActive(false);
+            potion.SetActive(false);
         }
     }
 
