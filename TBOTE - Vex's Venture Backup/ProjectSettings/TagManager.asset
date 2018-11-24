@@ -18,6 +18,7 @@ TagManager:
   - 9
   - wolf
   - TheDarkOne
+  - GameOverScreen
   layers:
   - Default
   - TransparentFX
