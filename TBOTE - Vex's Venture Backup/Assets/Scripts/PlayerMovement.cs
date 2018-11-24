@@ -13,12 +13,13 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 move = Vector3.zero;
 
     public GameObject camera;
+    public GameObject potion;
     public GameObject torch;
     public GameObject knife;
-    public GameObject potion;
 
     JumpScareWraith jumpScareWraith;
     CharacterController controller;
+    ItemHandler itemHandler;
     PlayerClass player;
     Animator anim;
     CameraMovement cameraMovement;
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         jumpScareWraith = camera.GetComponent<JumpScareWraith>();
         anim = camera.GetComponent<Animator>();
         cameraMovement = camera.GetComponent<CameraMovement>();
+        itemHandler = gameObject.GetComponent<ItemHandler>();
     }
 
     void Update()
@@ -48,9 +50,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetBool("IsDying", true);
                 cameraMovement.enabled = false;
+                itemHandler.enabled = false;
                 death = true;
                 torch.SetActive(false);
                 knife.SetActive(false);
+                potion.SetActive(false);
                 
                 RenderSettings.fogEndDistance = 3f;
 
@@ -84,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("IsDying", true);
             cameraMovement.enabled = false;
+            itemHandler.enabled = false;
             death = true;
             torch.SetActive(false);
             knife.SetActive(false);

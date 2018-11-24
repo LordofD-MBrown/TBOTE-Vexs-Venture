@@ -97,6 +97,7 @@ public class TheDarkOneAI : MonoBehaviour {
         }
         else if(theDarkOneDeath == true)
         {
+            RenderSettings.fog = false;
             isDying = true;
             anim.SetBool("IsDying", isDying);
         }

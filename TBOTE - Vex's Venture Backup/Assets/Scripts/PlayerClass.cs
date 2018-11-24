@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerClass : MonoBehaviour
 {
 
     private bool torch = false;
     private bool knife = false;
-    private bool nightPotion = true;
+    private bool nightPotion = false;
     private bool inAnim = false;
     private float duration_of_potion = 10f;
 

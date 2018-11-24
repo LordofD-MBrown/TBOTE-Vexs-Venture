@@ -22,7 +22,6 @@ public class UseKnife : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        RenderSettings.fogEndDistance = 2;
         if (player.GetKnife() == true)
         {
             if (in_use == false && Input.GetMouseButtonDown(0))

@@ -9,18 +9,23 @@ public class JumpScareWraith : MonoBehaviour {
     public GameObject wraith;
     public GameObject torch;
     public GameObject knife;
+    public GameObject potion;
 
     PlayerMovement playerMovement;
+    ItemHandler itemHandler;
 
     int randomNumber;
 
 	void Start ()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
-
+        itemHandler = player.GetComponent<ItemHandler>();
         playerMovement.enabled = false;
+        itemHandler.enabled = false;
         torch.SetActive(false);
         knife.SetActive(false);
+        potion.SetActive(false);
+        
 
         StartCoroutine("JumpScareTimmer");
     }

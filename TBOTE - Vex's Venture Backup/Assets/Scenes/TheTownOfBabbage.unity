@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.077284686, g: 0.07188184, b: 0.05566094, a: 1}
+  m_IndirectSpecularColor: {r: 0.077284776, g: 0.07188184, b: 0.055660933, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6168,18 +6168,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: -0.23804212, y: 0.16968597, z: 0.00000078976115}
---- !u!114 &123445898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 123445894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb4c247ead1a924e8538847b41815c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 965182640}
 --- !u!4 &141302629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 410932, guid: 731670d05affd0045a25600d2045889f,
@@ -11311,18 +11299,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: -0.23804212, y: 0.16968597, z: 0.00000078976115}
---- !u!114 &176826446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 176826442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb4c247ead1a924e8538847b41815c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 965182640}
 --- !u!1001 &184413159
 Prefab:
   m_ObjectHideFlags: 0
@@ -25088,18 +25064,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: -0.23804212, y: 0.16968597, z: 0.00000078976115}
---- !u!114 &493475911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 493475907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb4c247ead1a924e8538847b41815c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 965182640}
 --- !u!1 &493593065 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100068, guid: 282e8b90ec2e0ec4c802290c7897d659,
@@ -42643,7 +42607,7 @@ GameObject:
   - component: {fileID: 735546714}
   m_Layer: 0
   m_Name: Moonshine_Jug4 (3)
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62047,6 +62011,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_TagString
+      value: Knife
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
   m_IsPrefabAsset: 0
@@ -68023,18 +67991,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 115752, guid: 731670d05affd0045a25600d2045889f,
     type: 2}
   m_PrefabInternal: {fileID: 1940555340}
---- !u!114 &899280723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 899280722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fff91cf3a0eea743a75d4bc0ab992f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 965182640}
 --- !u!135 &899280724
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -68808,18 +68764,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: -0.23804212, y: 0.16968597, z: 0.00000078976115}
---- !u!114 &939128023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 939128019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb4c247ead1a924e8538847b41815c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 965182640}
 --- !u!1001 &942092204
 Prefab:
   m_ObjectHideFlags: 0
@@ -73585,9 +73529,9 @@ MonoBehaviour:
   gravity: 30
   move: {x: 0, y: 0, z: 0}
   camera: {fileID: 1228491429}
+  potion: {fileID: 1782170208}
   torch: {fileID: 570788609}
   knife: {fileID: 671695724}
-  potion: {fileID: 1782170208}
 --- !u!114 &965182643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78550,7 +78494,7 @@ GameObject:
   - component: {fileID: 985368250}
   m_Layer: 0
   m_Name: Moonshine_Jug4 (4)
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78754,7 +78698,7 @@ GameObject:
   - component: {fileID: 999277503}
   m_Layer: 0
   m_Name: Moonshine_Jug4
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84821,7 +84765,7 @@ GameObject:
   - component: {fileID: 1117615605}
   m_Layer: 0
   m_Name: Moonshine_Jug4 (2)
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94689,18 +94633,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: -0.23804212, y: 0.16968597, z: 0.00000078976115}
---- !u!114 &1165883635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1165883631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb4c247ead1a924e8538847b41815c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 965182640}
 --- !u!1001 &1166698616
 Prefab:
   m_ObjectHideFlags: 0
@@ -96138,6 +96070,7 @@ MonoBehaviour:
   wraith: {fileID: 408714856}
   torch: {fileID: 570788609}
   knife: {fileID: 671695724}
+  potion: {fileID: 1782170208}
 --- !u!114 &1228491435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131608,7 +131541,7 @@ GameObject:
   - component: {fileID: 1575424257}
   m_Layer: 0
   m_Name: Moonshine_Jug4 (1)
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139246,6 +139179,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_TagString
+      value: Knife
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
   m_IsPrefabAsset: 0
@@ -140342,18 +140279,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: -0.23804212, y: 0.16968597, z: 0.00000078976115}
---- !u!114 &1835803758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1835803754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb4c247ead1a924e8538847b41815c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 965182640}
 --- !u!1001 &1837225453
 Prefab:
   m_ObjectHideFlags: 0
@@ -141265,6 +141190,10 @@ Prefab:
     - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_TagString
+      value: Knife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
@@ -147568,6 +147497,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_TagString
+      value: Knife
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
   m_IsPrefabAsset: 0
@@ -147743,6 +147676,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_TagString
+      value: Knife
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}
   m_IsPrefabAsset: 0
@@ -147826,6 +147763,10 @@ Prefab:
     - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 2}
+      propertyPath: m_TagString
+      value: Knife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2959226abee63e42afe64c17736919a, type: 2}

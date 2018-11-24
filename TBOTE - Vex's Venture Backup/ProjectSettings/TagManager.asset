@@ -19,6 +19,7 @@ TagManager:
   - wolf
   - TheDarkOne
   - GameOverScreen
+  - Potion
   layers:
   - Default
   - TransparentFX

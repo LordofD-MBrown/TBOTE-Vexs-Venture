@@ -30,7 +30,6 @@ public class ItemHandler : MonoBehaviour {
         {
             
             currentItem++;
-            Debug.Log(currentItem);
 
             if(currentItem == 1 && player.GetTorch() == true)
             {
