@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerPointer : MonoBehaviour {
 
@@ -9,18 +10,23 @@ public class PlayerPointer : MonoBehaviour {
 
     public Camera camera;
     public GameObject player;
+    public GameObject itemTextObject;
+
+    TextMeshProUGUI itemText;
 
     PlayerClass playerinfo;
 
     void start()
     {
-        
+        itemText = itemTextObject.GetComponent<TextMeshProUGUI>();
+        itemText.SetText("p");
     }
 	void Update ()
     {
-		if(Input.GetKeyDown(KeyCode.E))
+        Hover();
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            Interact();
+            Interact();   
         }
 	}
 
@@ -63,6 +69,23 @@ public class PlayerPointer : MonoBehaviour {
                 playerinfo.GrabPotion();
                 hitInformation.transform.gameObject.SetActive(false);
             }
+        }
+    }
+    void Hover()
+    {
+        playerinfo = player.GetComponent<PlayerClass>();
+        RaycastHit hitInformation;
+
+        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hitInformation, range))
+        {
+            Debug.Log(hitInformation.transform.name);
+            Debug.Log(hitInformation.transform.tag);
+
+            if (hitInformation.transform.name == "PortaltoForest")
+            {
+                itemText.SetText("The Veronian Forest");
+            }
+              
         }
     }
 }
