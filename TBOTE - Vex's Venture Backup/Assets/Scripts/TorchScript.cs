@@ -9,6 +9,7 @@ public class TorchScript : MonoBehaviour {
     int Diming_Rate;
     float baseLight;
     bool forest = false;
+    bool wait = false;
 
     //Public GameObjects=====
     public GameObject playerObject;
@@ -63,9 +64,18 @@ public class TorchScript : MonoBehaviour {
         Time.timeScale = 1;
         //===========================
     }
+    void OnEnable()
+    {
+        wait = false;
+    }
 
     void LateUpdate ()
     {
+        if(wait == false)
+        {
+            StartCoroutine("torchDim");
+            wait = true;
+        }
         if(SceneManager.GetActiveScene().name == "TheTownOfBabbage")
         {
             forest = false;
@@ -489,11 +499,10 @@ public class TorchScript : MonoBehaviour {
 
     IEnumerator torchDim()
     {
-        while(true)
-        {
-            yield return new WaitForSeconds(1);
-            player.DimmingofTorch();
-        }
+      yield return new WaitForSeconds(1);
+      player.DimmingofTorch();
+      wait = false;
+
     }
 
     IEnumerator torchOut()

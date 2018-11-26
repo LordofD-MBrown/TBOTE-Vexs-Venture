@@ -12,7 +12,7 @@ public class PlayerClass : MonoBehaviour
     private bool inAnim = false;
     private float duration_of_potion = 10f;
 
-    private int torchLife = 400;
+    private double torchLife = 400;
 
     //Setters===========================================
     public void SetTorch(bool t_torch)
@@ -51,7 +51,7 @@ public class PlayerClass : MonoBehaviour
     {
         return nightPotion;
     }
-    public int GetTorchLife()
+    public double GetTorchLife()
     {
         return torchLife;
     }

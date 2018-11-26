@@ -6,24 +6,18 @@ using TMPro;
 
 public class PlayerPointer : MonoBehaviour {
 
-    float range = 10f;
+    float range = 5f;
 
     public Camera camera;
     public GameObject player;
-    public GameObject itemTextObject;
-
-    TextMeshProUGUI itemText;
 
     PlayerClass playerinfo;
 
     void start()
     {
-        itemText = itemTextObject.GetComponent<TextMeshProUGUI>();
-        itemText.SetText("p");
     }
 	void Update ()
     {
-        Hover();
         if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();   
@@ -64,28 +58,12 @@ public class PlayerPointer : MonoBehaviour {
                 playerinfo.SetKnife(true);
                 hitInformation.transform.gameObject.SetActive(false);             
             }
-            if(hitInformation.transform.tag == "Potion")
+            if(hitInformation.transform.tag == "Night Vision Potion")
             {
                 playerinfo.GrabPotion();
                 hitInformation.transform.gameObject.SetActive(false);
             }
         }
     }
-    void Hover()
-    {
-        playerinfo = player.GetComponent<PlayerClass>();
-        RaycastHit hitInformation;
-
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hitInformation, range))
-        {
-            Debug.Log(hitInformation.transform.name);
-            Debug.Log(hitInformation.transform.tag);
-
-            if (hitInformation.transform.name == "PortaltoForest")
-            {
-                itemText.SetText("The Veronian Forest");
-            }
-              
-        }
-    }
+  
 }
