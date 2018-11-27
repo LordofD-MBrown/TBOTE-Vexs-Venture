@@ -95,5 +95,19 @@ public class PlayerMovement : MonoBehaviour
             potion.SetActive(false);
         }
     }
+    //--- Michael --- Testing respawn Start
+    public void playerRespawn()
+    {
+        anim.SetBool("IsDying", false);
+        cameraMovement.enabled = true;
+        itemHandler.enabled = true;
+        death = false;
+        
 
+        /*playerAnim = GameObject.Find("FP System");
+        playerAnim.GetComponent<Animator>().SetBool("IsDying", false);
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = respawnPoint.transform.position;*/
+    }
+    //--- Michael --- Testing respawn End
 }
