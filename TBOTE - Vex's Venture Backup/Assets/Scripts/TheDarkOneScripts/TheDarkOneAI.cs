@@ -100,6 +100,7 @@ public class TheDarkOneAI : MonoBehaviour {
             RenderSettings.fog = false;
             isDying = true;
             anim.SetBool("IsDying", isDying);
+            StartCoroutine("Death");
         }
 	}
 
@@ -166,6 +167,12 @@ public class TheDarkOneAI : MonoBehaviour {
         RangeAttack.SetActive(true);
         yield return new WaitForSeconds(2f);
         RangeAttack.SetActive(false);
+    }
+
+    IEnumerator Death()
+    {
+        yield return new WaitForSeconds(6f);
+        gameObject.SetActive(false);
     }
 
     

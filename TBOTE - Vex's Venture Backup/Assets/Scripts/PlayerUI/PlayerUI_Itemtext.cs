@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PlayerUI_Itemtext : MonoBehaviour
@@ -8,16 +9,26 @@ public class PlayerUI_Itemtext : MonoBehaviour
 
     float range = 5f;
     public Camera camera;
+    public GameObject player;
+
+    PlayerClass playerClass;
+    GameObject TheDarkOne;
     TextMeshProUGUI itemtext;
 
 	void Start ()
     {
+        playerClass = player.GetComponent<PlayerClass>();
         itemtext = gameObject.GetComponent<TextMeshProUGUI>();
         itemtext.SetText("");
 	}
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
+        {
+            TheDarkOne = GameObject.Find("The Dark One");
+        }
+            
         Hover();
     }
 
@@ -34,11 +45,11 @@ public class PlayerUI_Itemtext : MonoBehaviour
             {
                 itemtext.SetText("Torch");
             }
-            else if (hitInformation.transform.tag == "Knife")
+            else if (hitInformation.transform.tag == "Knife" && playerClass.GetKnife() == false)
             {
                 itemtext.SetText("Knife");
             }
-            else if (hitInformation.transform.tag == "Potion")
+            else if (hitInformation.transform.tag == "Potion" && playerClass.GetNightPotion() == false)
             {
                 itemtext.SetText("Potion");
             }
@@ -49,6 +60,14 @@ public class PlayerUI_Itemtext : MonoBehaviour
             else if (hitInformation.transform.name == "PortaltoAbbey")
             {
                 itemtext.SetText("The Abbey of St. Tempes");
+            }
+            else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == true)
+            {
+                itemtext.SetText("The Tome of Imortality (Protected)");
+            }
+            else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == false)
+            {
+                itemtext.SetText("The Tome of Imortality (Protected)");
             }
             else
             {

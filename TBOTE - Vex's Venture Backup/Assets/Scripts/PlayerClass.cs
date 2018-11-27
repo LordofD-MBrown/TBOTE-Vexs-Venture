@@ -10,6 +10,7 @@ public class PlayerClass : MonoBehaviour
     private bool knife = false;
     private bool nightPotion = false;
     private bool inAnim = false;
+    private bool tome = false;
     private float duration_of_potion = 10f;
 
     private double torchLife = 400;
@@ -35,6 +36,11 @@ public class PlayerClass : MonoBehaviour
     {
         inAnim = t_inAnim;
     }
+
+    public void SetTome(bool t_tome)
+    {
+        tome = t_tome;
+    }
     //===================================================
 
     
@@ -58,6 +64,10 @@ public class PlayerClass : MonoBehaviour
     public bool GetInAnim()
     {
         return inAnim;
+    }
+    public bool GetTome()
+    {
+        return tome;
     }
     //===================================================
 

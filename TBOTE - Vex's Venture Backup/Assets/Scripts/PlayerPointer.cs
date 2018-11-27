@@ -10,6 +10,7 @@ public class PlayerPointer : MonoBehaviour {
 
     public Camera camera;
     public GameObject player;
+    GameObject TheDarkOne;
 
     PlayerClass playerinfo;
 
@@ -18,6 +19,10 @@ public class PlayerPointer : MonoBehaviour {
     }
 	void Update ()
     {
+        if (SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
+        {
+            TheDarkOne = GameObject.Find("The Dark One");
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();   
@@ -58,9 +63,14 @@ public class PlayerPointer : MonoBehaviour {
                 playerinfo.SetKnife(true);
                 hitInformation.transform.gameObject.SetActive(false);             
             }
-            if(hitInformation.transform.tag == "Night Vision Potion")
+            if(hitInformation.transform.tag == "Potion")
             {
                 playerinfo.GrabPotion();
+                hitInformation.transform.gameObject.SetActive(false);
+            }
+            if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == true)
+            {
+                playerinfo.SetTome(true);
                 hitInformation.transform.gameObject.SetActive(false);
             }
         }
