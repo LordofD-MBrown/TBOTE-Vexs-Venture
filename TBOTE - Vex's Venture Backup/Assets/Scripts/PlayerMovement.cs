@@ -94,6 +94,16 @@ public class PlayerMovement : MonoBehaviour
             knife.SetActive(false);
             potion.SetActive(false);
         }
+        if(other.gameObject.name == "Black Hole")
+        {
+            anim.SetBool("IsDying", true);
+            cameraMovement.enabled = false;
+            itemHandler.enabled = false;
+            death = true;
+            torch.SetActive(false);
+            knife.SetActive(false);
+            potion.SetActive(false);
+        }
     }
     //--- Michael --- Testing respawn Start
     public void playerRespawn()

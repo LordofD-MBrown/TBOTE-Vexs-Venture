@@ -49,7 +49,7 @@ public class PlayerUI_Itemtext : MonoBehaviour
             {
                 itemtext.SetText("Knife");
             }
-            else if (hitInformation.transform.tag == "Potion" && playerClass.GetNightPotion() == false)
+            else if (hitInformation.transform.tag == "Potion")
             {
                 itemtext.SetText("Potion");
             }
@@ -67,7 +67,7 @@ public class PlayerUI_Itemtext : MonoBehaviour
             }
             else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == false)
             {
-                itemtext.SetText("The Tome of Imortality (Protected)");
+                itemtext.SetText("The Tome of Imortality");
             }
             else
             {

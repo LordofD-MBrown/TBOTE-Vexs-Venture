@@ -67,6 +67,7 @@ public class TorchScript : MonoBehaviour {
     void OnEnable()
     {
         wait = false;
+        player.DimmingofTorch();
     }
 
     void LateUpdate ()

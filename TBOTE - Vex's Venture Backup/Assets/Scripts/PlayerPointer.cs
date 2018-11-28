@@ -27,6 +27,15 @@ public class PlayerPointer : MonoBehaviour {
         {
             Interact();   
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            playerinfo.SetKnife(true);
+            playerinfo.SetTorch(true);
+            DontDestroyOnLoad(player);
+            SceneManager.LoadScene("TheAbbeyofSaintTempes");
+            Vector3 loadPosition = new Vector3(-32.5f, 2.535f, 60.14f);
+            player.transform.position = loadPosition;
+        }
 	}
 
     void Interact()

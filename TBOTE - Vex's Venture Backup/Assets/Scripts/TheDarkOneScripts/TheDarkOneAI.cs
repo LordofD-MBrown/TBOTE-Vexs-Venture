@@ -11,6 +11,9 @@ public class TheDarkOneAI : MonoBehaviour {
 
     public GameObject MeleeAttack;
     public GameObject RangeAttack;
+    public GameObject Black_Hole;
+
+   
 
     bool activeAnimation = false;
     bool isWalking = false;
@@ -172,6 +175,8 @@ public class TheDarkOneAI : MonoBehaviour {
     IEnumerator Death()
     {
         yield return new WaitForSeconds(6f);
+        RenderSettings.fog = false;
+        Black_Hole.SetActive(true);
         gameObject.SetActive(false);
     }
 
