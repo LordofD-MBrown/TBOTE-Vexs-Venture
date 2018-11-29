@@ -20,6 +20,7 @@ public class CameraMovement : MonoBehaviour
         character = GameObject.Find("Player");
         anim = GetComponent<Animator>();
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
 
     void Update()
@@ -27,6 +28,7 @@ public class CameraMovement : MonoBehaviour
         if (jumpScareWraith.activeInHierarchy == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            
             leftRight += speedLeftRight * Input.GetAxis("Mouse X");
             upDown += speedUpDown * Input.GetAxis("Mouse Y");
 

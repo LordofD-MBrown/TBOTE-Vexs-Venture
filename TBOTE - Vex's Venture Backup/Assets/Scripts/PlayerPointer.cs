@@ -10,6 +10,7 @@ public class PlayerPointer : MonoBehaviour {
 
     public Camera camera;
     public GameObject player;
+    public GameObject p_menu;
     GameObject TheDarkOne;
 
     PlayerClass playerinfo;
@@ -20,7 +21,7 @@ public class PlayerPointer : MonoBehaviour {
 
     void start()
     {
-        pauseMenu = FindObjectOfType<PauseMenu>();
+        pauseMenu = p_menu.GetComponent<PauseMenu>();
     }
     //--- Michael -- Pause Menu -- End
 	void Update ()
@@ -48,13 +49,16 @@ public class PlayerPointer : MonoBehaviour {
             pauseMenu = new PauseMenu();
             if (GameIsPaused)
             {
-                
-                pauseMenu.Resume();
+                Time.timeScale = 1f;
+                p_menu.SetActive(true);
+                //pauseMenu.Resume();
                 GameIsPaused = false;
             }
             else
             {
-                pauseMenu.Pause();
+                Time.timeScale = 0f;
+                p_menu.SetActive(false);
+                //pauseMenu.Pause();
                 GameIsPaused = true;
             }
         }

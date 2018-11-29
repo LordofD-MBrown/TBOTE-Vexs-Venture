@@ -8,6 +8,7 @@ public class RestartGame : MonoBehaviour
 {
     
     public GameObject GameOverUI;
+    public GameObject player;
 
 
     public void GameOver()                   //--- enter Game Over event
@@ -38,21 +39,23 @@ public class RestartGame : MonoBehaviour
 
     public void QuitGame()
     {
-        GameOverUI.SetActive(false);
+        player.SetActive(false);
         SceneManager.LoadScene(0);
         
     }
 
-    void Awake()
+    /*void Awake()
     {
-        /*GameObject[] objs = GameObject.FindGameObjectsWithTag("GameOverScreen");
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("GameOverScreen");
 
         if (objs.Length > 1)
         {
             Destroy(GameOverUI);
-        }*/
+        }
         
-
+        //if (SceneManager.GetActiveScene() == "TS)
         DontDestroyOnLoad(GameOverUI);
-    }
+
+    }*/
+
 }
