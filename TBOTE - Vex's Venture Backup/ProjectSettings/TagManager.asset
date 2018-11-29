@@ -20,6 +20,7 @@ TagManager:
   - TheDarkOne
   - GameOverScreen
   - Potion
+  - PauseScreen
   layers:
   - Default
   - TransparentFX

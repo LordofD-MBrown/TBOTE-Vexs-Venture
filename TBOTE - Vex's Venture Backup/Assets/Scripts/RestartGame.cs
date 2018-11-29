@@ -7,16 +7,11 @@ using UnityEngine.SceneManagement;
 public class RestartGame : MonoBehaviour
 {
     
-    //bool isDead = true;                      //--- When this script is called, set bool to true
     public GameObject GameOverUI;
 
 
     public void GameOver()                   //--- enter Game Over event
     {
-        //GameOverUI = GameObject.FindGameObjectWithTag("GameOverScreen");
-
-
-        //GameOverUI = GameObject.FindWithTag("GameOverScreen");
         bool isDead = true;
         Debug.Log("GAME OVER");
         Debug.Log(GameOverUI.tag);
@@ -27,19 +22,17 @@ public class RestartGame : MonoBehaviour
             isDead = false;                  //--- reset to false
             Cursor.lockState = CursorLockMode.None;
             GameOverUI.SetActive(true);      //--- enable the Game Over screen
-            
-            //Time.timeScale = 0f;             
+                       
         }
     }
 
     public void RestartButton()
     {
         Debug.Log("INSIDE THE RESTART BUTTON PRESS");
-        //RespawnPlayer respawnPlayer = new RespawnPlayer();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         GameOverUI.SetActive(false);
         FindObjectOfType<RespawnPlayer>().respawn();
-        //respawnPlayer.respawn();
         
     }
 

@@ -60,7 +60,7 @@ public class GuardPatrolling : MonoBehaviour
             player.transform.position = loadPosition;
         }
 
-        Debug.Log(posNum);
+        //Debug.Log(posNum);
 
         if(trackPlayer == false)
         {

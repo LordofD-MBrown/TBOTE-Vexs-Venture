@@ -14,9 +14,15 @@ public class PlayerPointer : MonoBehaviour {
 
     PlayerClass playerinfo;
 
+    //--- Michael -- Pause Menu -- Start
+    bool GameIsPaused = false;
+    PauseMenu pauseMenu;
+
     void start()
     {
+        pauseMenu = FindObjectOfType<PauseMenu>();
     }
+    //--- Michael -- Pause Menu -- End
 	void Update ()
     {
         if (SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
@@ -36,7 +42,24 @@ public class PlayerPointer : MonoBehaviour {
             Vector3 loadPosition = new Vector3(-32.5f, 2.535f, 60.14f);
             player.transform.position = loadPosition;
         }
-	}
+        //--- Michael -- Pause Menu -- Start
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            pauseMenu = new PauseMenu();
+            if (GameIsPaused)
+            {
+                
+                pauseMenu.Resume();
+                GameIsPaused = false;
+            }
+            else
+            {
+                pauseMenu.Pause();
+                GameIsPaused = true;
+            }
+        }
+        //--- Michael -- Pause Menu -- End
+    }
 
     void Interact()
     {
@@ -84,5 +107,5 @@ public class PlayerPointer : MonoBehaviour {
             }
         }
     }
-  
+    
 }
