@@ -74,6 +74,10 @@ public class PlayerClass : MonoBehaviour
     public void DimmingofTorch()
     {
         torchLife--;
+        if(torchLife < 0)
+        {
+            torchLife = 0;
+        }
     }
 
     public void GrabPotion()

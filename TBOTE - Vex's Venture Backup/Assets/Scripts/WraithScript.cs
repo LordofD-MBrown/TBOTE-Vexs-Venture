@@ -26,6 +26,7 @@ public class WraithScript : MonoBehaviour {
         camera = GameObject.Find("FP System");
         wraithSpawning = GameObject.Find("WraithGod");
         wraithSpawn = wraithSpawning.GetComponent<WraithSpawn>();
+        wraithMovement.speed = 10;
     }
 	
 	void Update ()
