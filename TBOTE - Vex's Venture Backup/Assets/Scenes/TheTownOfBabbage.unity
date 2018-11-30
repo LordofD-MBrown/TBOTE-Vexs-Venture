@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07728464, g: 0.07188175, b: 0.055660866, a: 1}
+  m_IndirectSpecularColor: {r: 0.077284746, g: 0.07188179, b: 0.055660814, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -841,6 +841,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &60031345
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1486,6 +1494,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &120596179
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11431,6 +11447,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &184738837
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11899,6 +11923,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &215293880
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12002,6 +12034,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &219586982
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12352,6 +12392,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &226537204
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13020,6 +13068,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &255695635
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14364,6 +14420,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &378390535
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24495,6 +24559,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &454038355
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24598,6 +24670,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &464243301
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25255,6 +25335,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &493593069
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26432,6 +26520,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3facec0e73cbf4ba3fdbd2cc559896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   pos1: {fileID: 1678140108}
   pos2: {fileID: 563429963}
   pos3: {fileID: 1947888006}
@@ -26441,6 +26536,7 @@ MonoBehaviour:
   pos7: {fileID: 1296110333}
   pos8: {fileID: 1295345813}
   pos9: {fileID: 1222547815}
+  source: {fileID: 0}
 --- !u!195 &546925469
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27048,6 +27144,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &604269058
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32268,6 +32372,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &623536113
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -43646,6 +43758,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &771924335
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -48583,6 +48703,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &801500077
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -62765,6 +62893,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &829321018
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -68017,6 +68153,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &859698976
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -68344,6 +68488,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &874549391
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -69865,6 +70017,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: GuardFootsteps
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!4 &929820019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400068, guid: 282e8b90ec2e0ec4c802290c7897d659,
@@ -69891,6 +70051,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3facec0e73cbf4ba3fdbd2cc559896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   pos1: {fileID: 774303900}
   pos2: {fileID: 1830129440}
   pos3: {fileID: 2108501805}
@@ -69900,6 +70067,7 @@ MonoBehaviour:
   pos7: {fileID: 1720042601}
   pos8: {fileID: 929585119}
   pos9: {fileID: 51055661}
+  source: {fileID: 0}
 --- !u!195 &936992283
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -84915,6 +85083,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1014668397
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -91247,6 +91423,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &1134263155
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -97018,6 +97202,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1199548235
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -97304,6 +97496,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &1216401952
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -98014,6 +98214,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3facec0e73cbf4ba3fdbd2cc559896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   pos1: {fileID: 163990037}
   pos2: {fileID: 41036337}
   pos3: {fileID: 1947888006}
@@ -98023,6 +98230,7 @@ MonoBehaviour:
   pos7: {fileID: 644556729}
   pos8: {fileID: 1310667696}
   pos9: {fileID: 787344767}
+  source: {fileID: 0}
 --- !u!135 &1272149314
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -117878,6 +118086,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1414190270
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -117975,6 +118191,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1427019292
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -118172,6 +118396,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1445946683
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -118447,6 +118679,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &1462200416
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -133665,6 +133905,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1586345099
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -134876,6 +135124,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1646657088
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -135770,6 +136026,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &1715453923
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -140522,6 +140786,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &1720725616
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -141222,6 +141494,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &1759289440
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -141288,6 +141568,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1776646211
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -141478,6 +141766,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3facec0e73cbf4ba3fdbd2cc559896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   pos1: {fileID: 1096536805}
   pos2: {fileID: 160152459}
   pos3: {fileID: 531197759}
@@ -141487,6 +141782,7 @@ MonoBehaviour:
   pos7: {fileID: 174992495}
   pos8: {fileID: 1627695195}
   pos9: {fileID: 1873170785}
+  source: {fileID: 0}
 --- !u!195 &1784920813
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -142224,6 +142520,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &1830114506
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -143274,6 +143578,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &1887672724
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -144004,6 +144316,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3facec0e73cbf4ba3fdbd2cc559896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   pos1: {fileID: 1290759941}
   pos2: {fileID: 1565073899}
   pos3: {fileID: 112948406}
@@ -144013,6 +144332,7 @@ MonoBehaviour:
   pos7: {fileID: 488217023}
   pos8: {fileID: 1669788111}
   pos9: {fileID: 1288228175}
+  source: {fileID: 0}
 --- !u!135 &1921829247
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -150393,6 +150713,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &2050548095
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -150596,6 +150924,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!195 &2074812496
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -151234,6 +151570,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84457a750e904134d850bef62a211168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: 
+    clip: {fileID: 8300000, guid: 67bcce1eccfdcff47aa1b598f98db24b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  source: {fileID: 0}
 --- !u!135 &2126139417
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -40,6 +40,15 @@ public class CameraMovement : MonoBehaviour
             {
                 upDown = -60;
             }
+            //if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+            //{
+            //    FindObjectOfType<SFXManager>().Play("Footsteps");
+
+            //}
+            //if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+            //{
+            //    FindObjectOfType<SFXManager>().Pause("Footsteps");
+            //}
         }
         else if (jumpScareWraith.activeInHierarchy == true)
         {

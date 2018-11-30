@@ -77,6 +77,8 @@ public class PlayerPointer : MonoBehaviour {
 
             if(hitInformation.transform.name == "PortaltoForest")
             {
+                FindObjectOfType<AudioManager>().Pause("TownTheme");
+                FindObjectOfType<AudioManager>().Play("ForestTheme");
                 DontDestroyOnLoad(player);
                 SceneManager.LoadScene("TheVerionianForest(Right)");
                 Vector3 loadPosition = new Vector3(20f, 5.58f, 781.78f);
@@ -84,6 +86,8 @@ public class PlayerPointer : MonoBehaviour {
             }
             if(hitInformation.transform.name == "PortaltoAbbey")
             {
+                FindObjectOfType<AudioManager>().Pause("ForestTheme");
+                FindObjectOfType<AudioManager>().Play("AbbeyTheme");
                 DontDestroyOnLoad(player);
                 SceneManager.LoadScene("TheAbbeyofSaintTempes");
                 Vector3 loadPosition = new Vector3(-32.5f, 2.535f, 60.14f);

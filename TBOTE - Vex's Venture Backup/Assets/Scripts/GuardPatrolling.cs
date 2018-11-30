@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class GuardPatrolling : MonoBehaviour
 {
+    public Sound s;
     NavMeshAgent guardMovement;
 
     Animator anim;
@@ -28,11 +30,23 @@ public class GuardPatrolling : MonoBehaviour
 
     int posNum = 0;
     int invisbleHealth = 50;
+    [HideInInspector]
+    public AudioSource source;
 
+    void Awake()
+    {
+        s.source = gameObject.AddComponent<AudioSource>();
+        s.source.clip = s.clip;
 
+        s.source.volume = 1f;
+        s.source.pitch = 1f;
+        s.source.loop = s.loop;
+        s.source.spatialBlend = 1f;
+    }
     // Use this for initialization
     void Start ()
     {
+        s.source.Play();
         guardMovement = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         player = GameObject.Find("Player");
@@ -43,6 +57,7 @@ public class GuardPatrolling : MonoBehaviour
     {
         if (trackPlayer == true && transform.position != player.transform.position)
         {
+            //FindObjectOfType<SFXManager>().Play("GuardFootsteps");
             guardMovement.destination = player.transform.position;
 
         }
@@ -54,16 +69,21 @@ public class GuardPatrolling : MonoBehaviour
 
         if(playerCaught == true)
         {
+            s.source.Pause();
+            FindObjectOfType<AudioManager>().Pause("TownTheme");
+            // FindObjectOfType<SFXManager>().Pause("GuardFootsteps");
             DontDestroyOnLoad(player);
             SceneManager.LoadScene("TheVerionianForest(Right)");
             Vector3 loadPosition = new Vector3(20f, 5.58f, 781.78f);
             player.transform.position = loadPosition;
+            FindObjectOfType<AudioManager>().Play("ForestTheme");
         }
 
         //Debug.Log(posNum);
 
         if(trackPlayer == false)
         {
+            //FindObjectOfType<SFXManager>().Play("GuardFootsteps");
             if (posNum == 0)
             {
                 guardMovement.destination = pos1.transform.position;

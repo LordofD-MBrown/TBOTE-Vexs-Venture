@@ -19,9 +19,11 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         FindObjectOfType<SFXManager>().Play("TitleScreenPlay");
-        FindObjectOfType<AudioManager>().Pause("TitleScreen");
+        StartCoroutine(Waiting());
+
+       
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
     }
 	
     public void QuitGame()
@@ -36,4 +38,14 @@ public class MainMenu : MonoBehaviour
         masterVolume = volumeSlider.value;
         AudioListener.volume = masterVolume;
     }
+    IEnumerator Waiting()
+    {
+        print(Time.time);
+        yield return new WaitForSeconds(5);
+        FindObjectOfType<AudioManager>().Pause("TitleScreen");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        FindObjectOfType<AudioManager>().Play("TownTheme");
+        print(Time.time);
+    }
+
 }

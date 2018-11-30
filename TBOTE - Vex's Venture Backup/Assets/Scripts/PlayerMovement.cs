@@ -46,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
             move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             move = transform.TransformDirection(move);
             move *= speed;
-            if(fallingDistance >= 30)
+            
+            if (fallingDistance >= 30)
             {
                 anim.SetBool("IsDying", true);
                 cameraMovement.enabled = false;
@@ -62,6 +63,17 @@ public class PlayerMovement : MonoBehaviour
                 FindObjectOfType<RestartGame>().GameOver();
                 //Michael - Testing GameOver script - END
             }
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+            {
+
+                FindObjectOfType<SFXManager>().Play("Footsteps");
+            }
+            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D)&& !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.A)  && !Input.GetKeyDown(KeyCode.S)  && !Input.GetKeyDown(KeyCode.D) )
+            {
+               
+                    FindObjectOfType<SFXManager>().Pause("Footsteps");
+            }
+
             fallingDistance = 0;
         }
 
