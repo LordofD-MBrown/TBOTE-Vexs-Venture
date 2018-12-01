@@ -66,12 +66,12 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
             {
 
-                FindObjectOfType<SFXManager>().Play("Footsteps");
+                //FindObjectOfType<SFXManager>().Play("Footsteps");   --- Michael commented out due to bugs
             }
             if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D)&& !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.A)  && !Input.GetKeyDown(KeyCode.S)  && !Input.GetKeyDown(KeyCode.D) )
             {
                
-                    FindObjectOfType<SFXManager>().Pause("Footsteps");
+                    //FindObjectOfType<SFXManager>().Pause("Footsteps");   --- Michael commented out due to bugs
             }
 
             fallingDistance = 0;
@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
             potion.SetActive(false);
         }
     }
-    //--- Michael --- Testing respawn Start
+    //--- Michael --- Testing respawn -- Start
     public void playerRespawn()
     {
         anim.SetBool("IsDying", false);
@@ -125,11 +125,27 @@ public class PlayerMovement : MonoBehaviour
         itemHandler.enabled = true;
         death = false;
         
-
-        /*playerAnim = GameObject.Find("FP System");
-        playerAnim.GetComponent<Animator>().SetBool("IsDying", false);
-        player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = respawnPoint.transform.position;*/
     }
-    //--- Michael --- Testing respawn End
+    //--- Michael --- Testing respawn -- End
+
+
+    //--- Michael --- Testing PauseGame -- Start
+    public void pauseGame(bool isPaused)
+    {
+        if (isPaused)
+        {
+            cameraMovement.enabled = false;
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            cameraMovement.enabled = true;
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        
+        
+    }
+    //--- Michael --- Testing PauseGame -- End
 }

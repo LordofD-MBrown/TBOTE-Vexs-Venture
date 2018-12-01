@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0039992994, g: 0.00021815066, b: 0.000000051722555,
+  m_IndirectSpecularColor: {r: 0.0039992956, g: 0.00021815061, b: 0.000000051722555,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -15283,6 +15283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1160245936}
+  - component: {fileID: 1160245937}
   m_Layer: 0
   m_Name: HillsideTrees
   m_TagString: Untagged
@@ -15361,6 +15362,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1160245937
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160245935}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!1 &1161110737
 GameObject:
   m_ObjectHideFlags: 0
@@ -19164,6 +19179,7 @@ GameObject:
   - component: {fileID: 1389231368}
   - component: {fileID: 1389231370}
   - component: {fileID: 1389231369}
+  - component: {fileID: 1389231371}
   m_Layer: 0
   m_Name: Medieval_town
   m_TagString: Untagged
@@ -19232,6 +19248,20 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1389231367}
+  m_Mesh: {fileID: 4300000, guid: 595266724498225499d886ee8b8af57d, type: 3}
+--- !u!64 &1389231371
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389231367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 595266724498225499d886ee8b8af57d, type: 3}
 --- !u!1001 &1389956796
 Prefab:

@@ -47,19 +47,21 @@ public class PlayerPointer : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             pauseMenu = new PauseMenu();
-            if (GameIsPaused)
+            if (!GameIsPaused)
             {
-                Time.timeScale = 1f;
+                //Time.timeScale = 1f;
                 p_menu.SetActive(true);
+                FindObjectOfType<PlayerMovement>().pauseGame(true);
                 //pauseMenu.Resume();
-                GameIsPaused = false;
+                GameIsPaused = true;
             }
             else
             {
-                Time.timeScale = 0f;
+                //Time.timeScale = 0f;
                 p_menu.SetActive(false);
+                FindObjectOfType<PlayerMovement>().pauseGame(false);
                 //pauseMenu.Pause();
-                GameIsPaused = true;
+                GameIsPaused = false;
             }
         }
         //--- Michael -- Pause Menu -- End
@@ -77,8 +79,8 @@ public class PlayerPointer : MonoBehaviour {
 
             if(hitInformation.transform.name == "PortaltoForest")
             {
-                FindObjectOfType<AudioManager>().Pause("TownTheme");
-                FindObjectOfType<AudioManager>().Play("ForestTheme");
+                //FindObjectOfType<AudioManager>().Pause("TownTheme");
+                //FindObjectOfType<AudioManager>().Play("ForestTheme");  --- Michael commented out due to bugs
                 DontDestroyOnLoad(player);
                 SceneManager.LoadScene("TheVerionianForest(Right)");
                 Vector3 loadPosition = new Vector3(20f, 5.58f, 781.78f);

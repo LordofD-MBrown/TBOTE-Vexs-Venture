@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour
         character = GameObject.Find("Player");
         anim = GetComponent<Animator>();
         Time.timeScale = 1;
-        Cursor.visible = false;
+        //Cursor.visible = false; --- Michael testing
     }
 
     void Update()

@@ -38,8 +38,8 @@ public class PlayerUI_Itemtext : MonoBehaviour
 
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hitInformation, range))
         {
-            Debug.Log(hitInformation.transform.name);
-            Debug.Log(hitInformation.transform.tag);
+            //Debug.Log(hitInformation.transform.name);  --- Michael commented out due to console spam
+            //Debug.Log(hitInformation.transform.tag);   --- Michael commented out due to console spam
 
             if (hitInformation.transform.name == "TorchSpawn")
             {

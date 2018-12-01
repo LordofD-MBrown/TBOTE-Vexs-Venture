@@ -57,7 +57,7 @@ public class GuardPatrolling : MonoBehaviour
     {
         if (trackPlayer == true && transform.position != player.transform.position)
         {
-            //FindObjectOfType<SFXManager>().Play("GuardFootsteps");
+            //FindObjectOfType<SFXManager>().Play("GuardFootsteps"); --- Michael commented out due to bugs
             guardMovement.destination = player.transform.position;
 
         }
@@ -70,7 +70,7 @@ public class GuardPatrolling : MonoBehaviour
         if(playerCaught == true)
         {
             s.source.Pause();
-            FindObjectOfType<AudioManager>().Pause("TownTheme");
+            //FindObjectOfType<AudioManager>().Pause("TownTheme");      --- Michael commented out due to bugs
             // FindObjectOfType<SFXManager>().Pause("GuardFootsteps");
             DontDestroyOnLoad(player);
             SceneManager.LoadScene("TheVerionianForest(Right)");
