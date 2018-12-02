@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class ItemHandler : MonoBehaviour {
 
     PlayerClass player;
-
+    public Sound s;
     public GameObject player_ui;
 
     public GameObject torch;
@@ -14,7 +15,16 @@ public class ItemHandler : MonoBehaviour {
     public GameObject potion;
 
     int currentItem = 0;
+    void Awake()
+    {
+        s.source = gameObject.AddComponent<AudioSource>();
+        s.source.clip = s.clip;
 
+        s.source.volume = .15f;
+        s.source.pitch = 1f;
+        s.source.loop = s.loop;
+
+    }
 	// Use this for initialization
 
 	void Start ()
@@ -37,9 +47,18 @@ public class ItemHandler : MonoBehaviour {
                 turnOffItems();
                 torch.SetActive(true);
                 Debug.Log("Torch");
+                if(currentItem==1 && player.GetTorch()==true)
+                {
+                    s.source.Play();
+                }
+                
+                
+                
+                
             }
             else if (currentItem == 1 && player.GetTorch() != true)
-            {
+            {   
+
                 currentItem++;
             }
 
@@ -69,6 +88,7 @@ public class ItemHandler : MonoBehaviour {
 
             if (item == false)
             {
+                s.source.Pause();
                 turnOffItems();
                 currentItem = 0;
             }

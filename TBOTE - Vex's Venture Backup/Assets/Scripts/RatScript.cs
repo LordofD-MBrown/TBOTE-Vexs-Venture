@@ -56,7 +56,7 @@ public class RatScript : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Torch")
+        if (other.gameObject.tag == "Knife")
         {   
             ratmovement.enabled = false;
             dead = true;

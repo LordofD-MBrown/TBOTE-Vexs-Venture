@@ -79,8 +79,8 @@ public class PlayerPointer : MonoBehaviour {
 
             if(hitInformation.transform.name == "PortaltoForest")
             {
-                //FindObjectOfType<AudioManager>().Pause("TownTheme");
-                //FindObjectOfType<AudioManager>().Play("ForestTheme");  --- Michael commented out due to bugs
+                FindObjectOfType<AudioManager>().Pause("TownTheme");
+                FindObjectOfType<AudioManager>().Play("ForestTheme");  
                 DontDestroyOnLoad(player);
                 SceneManager.LoadScene("TheVerionianForest(Right)");
                 Vector3 loadPosition = new Vector3(20f, 5.58f, 781.78f);

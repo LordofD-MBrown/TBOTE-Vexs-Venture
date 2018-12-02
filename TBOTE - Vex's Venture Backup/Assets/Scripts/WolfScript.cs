@@ -11,7 +11,7 @@ public class WolfScript : MonoBehaviour {
     bool isWalking = false;
     public Transform wolf;
     int maxDist = 25;
-    int minDist = 8;
+    int minDist = 15;
 
     void Start()
     {
@@ -23,14 +23,16 @@ public class WolfScript : MonoBehaviour {
 
     void Update()
     {
-        wolfMovement.destination = wolfobj.transform.position;
-        wolfMovement.speed = 4;
+        
         if(Vector3.Distance(transform.position, wolfobj.transform.position) >= minDist)
         {
+            wolfMovement.destination = wolfobj.transform.position;
+            wolfMovement.speed = 4;
             isWalking = true;
             anim.SetBool("IsWalking", isWalking);
             if (Vector3.Distance(transform.position, wolfobj.transform.position) <= minDist)
             {
+                wolfMovement.isStopped = true;
                 goafterplayer();
 
 
@@ -43,7 +45,7 @@ public class WolfScript : MonoBehaviour {
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Torch")
+        if (other.gameObject.tag == "Knife")
         {
             wolfMovement.enabled = false;
             anim.SetBool("IsDying", true);            
@@ -52,6 +54,8 @@ public class WolfScript : MonoBehaviour {
 
    void goafterplayer()
     {
+        wolfMovement.isStopped = false;
+        Debug.Log("Going After Player");
         wolfMovement.destination = player.transform.position;
         if (transform.position!=player.transform.position)
         {

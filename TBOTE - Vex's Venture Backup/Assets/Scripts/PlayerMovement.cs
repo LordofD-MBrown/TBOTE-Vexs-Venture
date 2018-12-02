@@ -66,12 +66,12 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
             {
 
-                //FindObjectOfType<SFXManager>().Play("Footsteps");   --- Michael commented out due to bugs
+                FindObjectOfType<SFXManager>().Play("Footsteps");   
             }
             if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D)&& !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.A)  && !Input.GetKeyDown(KeyCode.S)  && !Input.GetKeyDown(KeyCode.D) )
             {
                
-                    //FindObjectOfType<SFXManager>().Pause("Footsteps");   --- Michael commented out due to bugs
+                    FindObjectOfType<SFXManager>().Pause("Footsteps");   
             }
 
             fallingDistance = 0;

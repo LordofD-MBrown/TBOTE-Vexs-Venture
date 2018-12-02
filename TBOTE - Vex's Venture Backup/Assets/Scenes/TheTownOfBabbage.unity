@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.077284686, g: 0.07188184, b: 0.05566094, a: 1}
+  m_IndirectSpecularColor: {r: 0.077284746, g: 0.07188179, b: 0.055660814, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -38712,12 +38712,12 @@ Prefab:
     - target: {fileID: 224335032677324612, guid: cf849bab8c4d4424abfecf02b0b4f023,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224071904677243606, guid: cf849bab8c4d4424abfecf02b0b4f023,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224824505419949050, guid: cf849bab8c4d4424abfecf02b0b4f023,
         type: 2}
@@ -75504,6 +75504,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b2d5ddbf570e64b88a8aa9ddec2106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s:
+    name: Torch
+    clip: {fileID: 8300000, guid: 6fdd3247378ae074d86bdcfe987f9494, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
   player_ui: {fileID: 965182640}
   torch: {fileID: 570788609}
   knife: {fileID: 671695724}
