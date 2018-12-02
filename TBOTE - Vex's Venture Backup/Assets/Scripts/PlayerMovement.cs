@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject torch;
     public GameObject knife;
     public GameObject wraith;
+    public GameObject playerUI;
+    public GameObject winScreen;
 
     JumpScareWraith jumpScareWraith;
     CharacterController controller;
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerClass player;
     Animator anim;
     CameraMovement cameraMovement;
+    PlayerPointer pp;
    
 
     void Start()
@@ -39,12 +42,23 @@ public class PlayerMovement : MonoBehaviour
         anim = camera.GetComponent<Animator>();
         cameraMovement = camera.GetComponent<CameraMovement>();
         itemHandler = gameObject.GetComponent<ItemHandler>();
+        pp = camera.GetComponent<PlayerPointer>();
         
     }
 
     void Update()
     {
         movePlayer();
+        if(player.GetEscaped() == true)
+        {
+            cameraMovement.enabled = false;
+            pp.enabled = false;
+            playerUI.SetActive(false);
+            torch.SetActive(false);
+            knife.SetActive(false);
+            potion.SetActive(false);
+            winScreen.SetActive(true);
+        }
     }
 
     void movePlayer()

@@ -21,6 +21,7 @@ TagManager:
   - GameOverScreen
   - Potion
   - PauseScreen
+  - Win
   layers:
   - Default
   - TransparentFX

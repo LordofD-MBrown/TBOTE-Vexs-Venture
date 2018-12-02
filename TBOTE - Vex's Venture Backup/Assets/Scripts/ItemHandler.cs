@@ -60,6 +60,7 @@ public class ItemHandler : MonoBehaviour {
 
             if(currentItem == 2 && player.GetKnife() == true)
             {
+                s.source.Pause();
                 item = true;
                 turnOffItems();
                 knife.SetActive(true);
@@ -72,6 +73,7 @@ public class ItemHandler : MonoBehaviour {
 
             if(currentItem == 3 && player.GetNightPotion() == true)
             {
+                s.source.Pause();
                 item = true;
                 turnOffItems();
                 potion.SetActive(true);

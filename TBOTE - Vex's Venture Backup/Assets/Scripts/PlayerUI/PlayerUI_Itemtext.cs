@@ -7,7 +7,7 @@ using TMPro;
 public class PlayerUI_Itemtext : MonoBehaviour
 {
 
-    float range = 5f;
+    float range = 10f;
     public Camera camera;
     public GameObject player;
 
@@ -38,8 +38,8 @@ public class PlayerUI_Itemtext : MonoBehaviour
 
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hitInformation, range))
         {
-            //Debug.Log(hitInformation.transform.name);  --- Michael commented out due to console spam
-            //Debug.Log(hitInformation.transform.tag);   --- Michael commented out due to console spam
+            //Debug.Log(hitInformation.transform.name);  //--- Michael commented out due to console spam
+            //Debug.Log(hitInformation.transform.tag);   //--- Michael commented out due to console spam
 
             if (hitInformation.transform.name == "TorchSpawn")
             {
@@ -68,6 +68,14 @@ public class PlayerUI_Itemtext : MonoBehaviour
             else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == false)
             {
                 itemtext.SetText("The Tome of Imortality");
+            }
+            else if (hitInformation.transform.tag == "Win" && playerClass.GetTome() == true)
+            {
+                itemtext.SetText("Escape");
+            }
+            else if (hitInformation.transform.tag == "Win" && playerClass.GetTome() == false)
+            {
+                itemtext.SetText("The Door is Sealed");
             }
             else
             {

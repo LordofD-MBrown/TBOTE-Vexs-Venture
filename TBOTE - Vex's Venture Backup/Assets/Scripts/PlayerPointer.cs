@@ -123,6 +123,14 @@ public class PlayerPointer : MonoBehaviour {
                 playerinfo.SetTome(true);
                 hitInformation.transform.gameObject.SetActive(false);
             }
+            if (hitInformation.transform.tag == "Win" && playerinfo.GetTome() == true)
+            {
+                playerinfo.SetEscaped(true);
+                DontDestroyOnLoad(player);
+                SceneManager.LoadScene("TheVerionianForest(Right)");
+                Vector3 loadPosition = new Vector3(283.3315f, 102.8619f, 155.7085f);
+                player.transform.position = loadPosition;
+            }
         }
     }
     
