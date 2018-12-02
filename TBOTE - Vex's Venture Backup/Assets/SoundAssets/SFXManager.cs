@@ -52,4 +52,15 @@ public class SFXManager : MonoBehaviour {
 
         s.source.Pause();
     }
+
+    public void Volume(string name, float volume)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not Found!");
+            return;
+        }
+        s.source.volume = (volume);
+    }
 }

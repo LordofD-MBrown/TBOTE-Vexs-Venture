@@ -47,14 +47,10 @@ public class ItemHandler : MonoBehaviour {
                 turnOffItems();
                 torch.SetActive(true);
                 Debug.Log("Torch");
-                if(currentItem==1 && player.GetTorch()==true)
+                if (currentItem == 1 && player.GetTorch() == true)
                 {
                     s.source.Play();
-                }
-                
-                
-                
-                
+                }               
             }
             else if (currentItem == 1 && player.GetTorch() != true)
             {   

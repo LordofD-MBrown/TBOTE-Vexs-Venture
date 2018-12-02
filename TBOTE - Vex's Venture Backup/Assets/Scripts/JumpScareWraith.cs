@@ -14,25 +14,24 @@ public class JumpScareWraith : MonoBehaviour {
     PlayerMovement playerMovement;
     ItemHandler itemHandler;
 
-    int randomNumber;
+    float randomNumber;
 
 	void Start ()
     {
         playerMovement = player.GetComponent<PlayerMovement>();
         itemHandler = player.GetComponent<ItemHandler>();
+        FindObjectOfType<SFXManager>().Play("WraithChant");
         playerMovement.enabled = false;
         itemHandler.enabled = false;
         torch.SetActive(false);
         knife.SetActive(false);
         potion.SetActive(false);
-        
-
         StartCoroutine("JumpScareTimmer");
     }
 
     IEnumerator JumpScareTimmer()
     {
-        randomNumber = Random.Range(1, 5);
+        randomNumber = Random.Range(1, 10);
         yield return new WaitForSeconds(randomNumber);
         wraith.gameObject.SetActive(true);
     }

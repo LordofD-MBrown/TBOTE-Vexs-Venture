@@ -11,6 +11,7 @@ public class PlayerPointer : MonoBehaviour {
     public Camera camera;
     public GameObject player;
     public GameObject p_menu;
+    public GameObject p_ui;
     GameObject TheDarkOne;
 
     PlayerClass playerinfo;
@@ -22,6 +23,7 @@ public class PlayerPointer : MonoBehaviour {
     void start()
     {
         pauseMenu = p_menu.GetComponent<PauseMenu>();
+        p_menu.SetActive(false);
     }
     //--- Michael -- Pause Menu -- End
 	void Update ()
@@ -38,10 +40,13 @@ public class PlayerPointer : MonoBehaviour {
         {
             playerinfo.SetKnife(true);
             playerinfo.SetTorch(true);
-            DontDestroyOnLoad(player);
+            DontDestroyOnLoad(player);           
             SceneManager.LoadScene("TheAbbeyofSaintTempes");
             Vector3 loadPosition = new Vector3(-32.5f, 2.535f, 60.14f);
             player.transform.position = loadPosition;
+            FindObjectOfType<AudioManager>().Pause("TownTheme");
+            FindObjectOfType<AudioManager>().Pause("ForestTheme");
+            //FindObjectOfType<AudioManager>().Play("AbbeyTheme");
         }
         //--- Michael -- Pause Menu -- Start
         if (Input.GetKeyDown(KeyCode.Space))
@@ -52,14 +57,17 @@ public class PlayerPointer : MonoBehaviour {
                 //Time.timeScale = 1f;
                 p_menu.SetActive(true);
                 FindObjectOfType<PlayerMovement>().pauseGame(true);
+                p_ui.SetActive(false);
                 //pauseMenu.Resume();
                 GameIsPaused = true;
             }
-            else
+            else if (GameIsPaused)
             {
                 //Time.timeScale = 0f;
                 p_menu.SetActive(false);
                 FindObjectOfType<PlayerMovement>().pauseGame(false);
+                FindObjectOfType<SFXManager>().Pause("Footsteps");
+                p_ui.SetActive(true);
                 //pauseMenu.Pause();
                 GameIsPaused = false;
             }

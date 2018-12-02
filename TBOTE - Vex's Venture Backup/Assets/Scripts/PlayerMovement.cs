@@ -1,21 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     int fallingDistance = 0;
     bool death = false;
-
+    bool jump = false;
+    bool firstpass = false;
     public float speed = 5f;
     public float gravity = 30f;
+    public float jumpStart;
+    public float jumpEnd;
+
     public Vector3 move = Vector3.zero;
 
     public GameObject camera;
     public GameObject potion;
     public GameObject torch;
     public GameObject knife;
+    public GameObject wraith;
 
     JumpScareWraith jumpScareWraith;
     CharacterController controller;
@@ -23,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerClass player;
     Animator anim;
     CameraMovement cameraMovement;
+   
 
     void Start()
     {
@@ -32,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         anim = camera.GetComponent<Animator>();
         cameraMovement = camera.GetComponent<CameraMovement>();
         itemHandler = gameObject.GetComponent<ItemHandler>();
+        
     }
 
     void Update()
@@ -46,8 +54,9 @@ public class PlayerMovement : MonoBehaviour
             move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             move = transform.TransformDirection(move);
             move *= speed;
-            
-            if (fallingDistance >= 30)
+            jumpEnd = player.transform.position.y;
+
+            if (jump == true && jumpStart - jumpEnd > 5)
             {
                 anim.SetBool("IsDying", true);
                 cameraMovement.enabled = false;
@@ -56,32 +65,40 @@ public class PlayerMovement : MonoBehaviour
                 torch.SetActive(false);
                 knife.SetActive(false);
                 potion.SetActive(false);
-                
-                RenderSettings.fogEndDistance = 3f;
-
                 //Michael - Testing GameOver script - BEGINNING
                 FindObjectOfType<RestartGame>().GameOver();
                 //Michael - Testing GameOver script - END
             }
+            else
+            {
+                jump = false;
+            }
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
             {
-
                 FindObjectOfType<SFXManager>().Play("Footsteps");   
             }
             if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D)&& !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.A)  && !Input.GetKeyDown(KeyCode.S)  && !Input.GetKeyDown(KeyCode.D) )
             {
-               
-                    FindObjectOfType<SFXManager>().Pause("Footsteps");   
-            }
-
-            fallingDistance = 0;
+                FindObjectOfType<SFXManager>().Pause("Footsteps");   
+            }           
         }
-
         if(!controller.isGrounded)
         {
-            fallingDistance++;
+            jump = true;
+            jumpStart = player.transform.position.y;
         }
-
+        if(SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
+        {
+            wraith = GameObject.FindWithTag("Wraith");
+            if (firstpass == false)
+            {
+                FindObjectOfType<SFXManager>().Play("HeartBeat");
+                firstpass = true;
+            }
+            float d = Vector3.Distance(wraith.transform.position, transform.position);
+            Debug.Log((1/(d-10)) * 10);
+            FindObjectOfType<SFXManager>().Volume("HeartBeat", ((1/(d - 10))*10));           
+        }
 
         move.y -= gravity * Time.deltaTime;
 
