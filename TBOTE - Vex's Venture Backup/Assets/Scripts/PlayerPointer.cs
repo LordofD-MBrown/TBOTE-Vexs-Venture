@@ -46,7 +46,7 @@ public class PlayerPointer : MonoBehaviour {
             player.transform.position = loadPosition;
             FindObjectOfType<AudioManager>().Pause("TownTheme");
             FindObjectOfType<AudioManager>().Pause("ForestTheme");
-            //FindObjectOfType<AudioManager>().Play("AbbeyTheme");
+            FindObjectOfType<AudioManager>().Play("AbbeyTheme");
         }
         //--- Michael -- Pause Menu -- Start
         if (Input.GetKeyDown(KeyCode.Space))

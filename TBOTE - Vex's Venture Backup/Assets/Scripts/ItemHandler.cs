@@ -20,7 +20,7 @@ public class ItemHandler : MonoBehaviour {
         s.source = gameObject.AddComponent<AudioSource>();
         s.source.clip = s.clip;
 
-        s.source.volume = .15f;
+        s.source.volume = .01f;
         s.source.pitch = 1f;
         s.source.loop = s.loop;
 
