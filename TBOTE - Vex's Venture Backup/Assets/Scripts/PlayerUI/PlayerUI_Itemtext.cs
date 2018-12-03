@@ -26,7 +26,7 @@ public class PlayerUI_Itemtext : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
         {
-            TheDarkOne = GameObject.Find("The Dark One");
+            TheDarkOne = GameObject.Find("Black Hole");
         }
             
         Hover();
@@ -61,11 +61,11 @@ public class PlayerUI_Itemtext : MonoBehaviour
             {
                 itemtext.SetText("The Abbey of St. Tempes");
             }
-            else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == true)
+            else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == false)
             {
                 itemtext.SetText("The Tome of Imortality (Protected)");
             }
-            else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == false)
+            else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == true)
             {
                 itemtext.SetText("The Tome of Imortality");
             }

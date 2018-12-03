@@ -22,6 +22,7 @@ TagManager:
   - Potion
   - PauseScreen
   - Win
+  - Hole
   layers:
   - Default
   - TransparentFX

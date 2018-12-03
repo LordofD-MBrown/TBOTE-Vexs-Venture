@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
             knife.SetActive(false);
             potion.SetActive(false);
         }
-        if(other.gameObject.name == "Black Hole")
+        if(other.gameObject.tag == "Hole")
         {
             anim.SetBool("IsDying", true);
             cameraMovement.enabled = false;

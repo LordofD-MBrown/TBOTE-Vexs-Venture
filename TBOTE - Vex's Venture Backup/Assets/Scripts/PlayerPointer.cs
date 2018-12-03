@@ -30,7 +30,7 @@ public class PlayerPointer : MonoBehaviour {
     {
         if (SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
         {
-            TheDarkOne = GameObject.Find("The Dark One");
+            TheDarkOne = GameObject.Find("Black Hole");
         }
         if (Input.GetKeyDown(KeyCode.E))
         {

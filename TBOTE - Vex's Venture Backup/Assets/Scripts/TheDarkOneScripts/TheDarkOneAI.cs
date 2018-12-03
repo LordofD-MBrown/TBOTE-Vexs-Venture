@@ -177,7 +177,7 @@ public class TheDarkOneAI : MonoBehaviour {
         yield return new WaitForSeconds(6f);
         RenderSettings.fog = false;
         Black_Hole.SetActive(true);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     
