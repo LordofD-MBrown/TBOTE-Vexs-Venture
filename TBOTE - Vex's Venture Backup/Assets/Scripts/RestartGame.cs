@@ -13,18 +13,18 @@ public class RestartGame : MonoBehaviour
 
     public void GameOver()                   //--- enter Game Over event
     {
-        bool isDead = true;
+        /*bool isDead = true;
         Debug.Log("GAME OVER");
         Debug.Log(GameOverUI.tag);
 
         if (isDead)                          //--- when bool is true...
-        {
-            Debug.Log("INSIDE IsDead CHECK");
-            isDead = false;                  //--- reset to false
+        {*/
+            //Debug.Log("INSIDE IsDead CHECK");
+            //isDead = false;                  //--- reset to false
             Cursor.lockState = CursorLockMode.None;
             GameOverUI.SetActive(true);      //--- enable the Game Over screen
                        
-        }
+        //}
     }
 
     public void RestartButton()

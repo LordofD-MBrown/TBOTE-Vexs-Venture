@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
             move *= speed;
             jumpEnd = player.transform.position.y;
 
-            if (jump == true && jumpStart - jumpEnd > 5)
+            if (jump == true && jumpStart - jumpEnd > 50) //--- Michael -- Testing range due to death entering forest
             {
                 anim.SetBool("IsDying", true);
                 cameraMovement.enabled = false;
@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
                 firstpass = true;
             }
             float d = Vector3.Distance(wraith.transform.position, transform.position);
-            Debug.Log((1/(d-10)) * 10);
+            //Debug.Log((1/(d-10)) * 10); --- Michael commented out for console spam
             FindObjectOfType<SFXManager>().Volume("HeartBeat", ((1/(d - 10))*10));           
         }
 
@@ -147,6 +147,19 @@ public class PlayerMovement : MonoBehaviour
             knife.SetActive(false);
             potion.SetActive(false);
         }
+        //--- Michael --- Water Death -- Start
+        if(other.gameObject.tag == "Water")
+        {
+            anim.SetBool("IsDying", true);
+            cameraMovement.enabled = false;
+            itemHandler.enabled = false;
+            death = true;
+            torch.SetActive(false);
+            knife.SetActive(false);
+            potion.SetActive(false);
+            FindObjectOfType<RestartGame>().GameOver();
+        }
+        //--- Michael --- Water Death -- End
     }
     //--- Michael --- Testing respawn -- Start
     public void playerRespawn()

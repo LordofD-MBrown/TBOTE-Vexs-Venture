@@ -23,6 +23,7 @@ TagManager:
   - PauseScreen
   - Win
   - Hole
+  - Water
   layers:
   - Default
   - TransparentFX

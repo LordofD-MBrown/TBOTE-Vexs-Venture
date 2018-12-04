@@ -53,6 +53,7 @@ public class CameraMovement : MonoBehaviour
         else if (jumpScareWraith.activeInHierarchy == true)
         {
             StartCoroutine("PlayerDeathAnimation");
+            
         }
 
         character.transform.eulerAngles = new Vector3(0f, leftRight, 0f);
@@ -71,6 +72,7 @@ public class CameraMovement : MonoBehaviour
 
         //Michael - Testing GameOver script - BEGINNING
         FindObjectOfType<RestartGame>().GameOver();
+        enabled = false;
         //Michael - Testing GameOver script - END
     }
 }
