@@ -15,6 +15,7 @@ public class PlayerPointer : MonoBehaviour {
     GameObject TheDarkOne;
 
     PlayerClass playerinfo;
+    TheDarkOneAI ai;
 
     //--- Michael -- Pause Menu -- Start
     bool GameIsPaused = false;
@@ -30,7 +31,8 @@ public class PlayerPointer : MonoBehaviour {
     {
         if (SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
         {
-            TheDarkOne = GameObject.Find("Black Hole");
+            TheDarkOne = GameObject.Find("The Dark One");
+            ai = TheDarkOne.GetComponent<TheDarkOneAI>();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -91,7 +93,7 @@ public class PlayerPointer : MonoBehaviour {
                 FindObjectOfType<AudioManager>().Play("ForestTheme");  
                 DontDestroyOnLoad(player);
                 SceneManager.LoadScene("TheVerionianForest(Right)");
-                Vector3 loadPosition = new Vector3(20f, 5.58f, 781.78f);
+                Vector3 loadPosition = new Vector3(20f, 5.58f, 791.78f);
                 player.transform.position = loadPosition;
             }
             if(hitInformation.transform.name == "PortaltoAbbey")
@@ -118,7 +120,7 @@ public class PlayerPointer : MonoBehaviour {
                 playerinfo.GrabPotion();
                 hitInformation.transform.gameObject.SetActive(false);
             }
-            if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == true)
+            if (hitInformation.transform.name == "DarkTome" && ai.SetDarkOneDeath() == true)
             {
                 playerinfo.SetTome(true);
                 hitInformation.transform.gameObject.SetActive(false);

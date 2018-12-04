@@ -14,6 +14,7 @@ public class PlayerUI_Itemtext : MonoBehaviour
     PlayerClass playerClass;
     GameObject TheDarkOne;
     TextMeshProUGUI itemtext;
+    TheDarkOneAI ai;
 
 	void Start ()
     {
@@ -26,7 +27,8 @@ public class PlayerUI_Itemtext : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
         {
-            TheDarkOne = GameObject.Find("Black Hole");
+            TheDarkOne = GameObject.Find("The Dark One");
+            ai = TheDarkOne.GetComponent<TheDarkOneAI>();
         }
             
         Hover();
@@ -61,11 +63,11 @@ public class PlayerUI_Itemtext : MonoBehaviour
             {
                 itemtext.SetText("The Abbey of St. Tempes");
             }
-            else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == false)
+            else if (hitInformation.transform.name == "DarkTome" && ai.SetDarkOneDeath() == false)
             {
                 itemtext.SetText("The Tome of Imortality (Protected)");
             }
-            else if (hitInformation.transform.name == "DarkTome" && TheDarkOne.activeInHierarchy == true)
+            else if (hitInformation.transform.name == "DarkTome" && ai.SetDarkOneDeath() == true)
             {
                 itemtext.SetText("The Tome of Imortality");
             }

@@ -30,17 +30,17 @@ public class RestartGame : MonoBehaviour
     public void RestartButton()
     {
         Debug.Log("INSIDE THE RESTART BUTTON PRESS");
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        GameOverUI.SetActive(false);
-        FindObjectOfType<RespawnPlayer>().respawn();
+        SceneManager.LoadScene(0);
+        player.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        GameOverUI.SetActive(false);       
         
     }
 
     public void QuitGame()
     {
         player.SetActive(false);
-        SceneManager.LoadScene(0);
+        Application.Quit();
         
     }
 

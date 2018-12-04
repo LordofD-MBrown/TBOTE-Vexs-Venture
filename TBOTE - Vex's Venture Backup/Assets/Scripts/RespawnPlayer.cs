@@ -18,7 +18,7 @@ public class RespawnPlayer : MonoBehaviour
         playerAnim.GetComponent<Animator>().SetBool("IsDying", false);
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = respawnPoint.transform.position;*/
-        FindObjectOfType<PlayerMovement>().playerRespawn();
+        //FindObjectOfType<PlayerMovement>().playerRespawn();
         player = GameObject.FindGameObjectWithTag("Player");
         Debug.Log("THE PLAYER'S POSITION IS " + player.transform.position);
         player.transform.position = respawnPoint.transform.position;

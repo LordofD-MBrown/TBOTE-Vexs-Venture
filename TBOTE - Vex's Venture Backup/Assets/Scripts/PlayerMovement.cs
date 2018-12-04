@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     int fallingDistance = 0;
     bool death = false;
     bool jump = false;
+    bool forest = false;
+    bool first = false;
     bool firstpass = false;
     public float speed = 5f;
     public float gravity = 30f;
@@ -47,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
-    {
+    {        
         movePlayer();
         if(player.GetEscaped() == true)
         {
@@ -67,23 +69,23 @@ public class PlayerMovement : MonoBehaviour
         {
             move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             move = transform.TransformDirection(move);
-            move *= speed;
+            move *= speed;   
             jumpEnd = player.transform.position.y;
-
-            if (jump == true && jumpStart - jumpEnd > 50) //--- Michael -- Testing range due to death entering forest
+            if (jump == true && jumpStart - jumpEnd > 1f) //--- Michael -- Testing range due to death entering forest
             {
-                anim.SetBool("IsDying", true);
-                cameraMovement.enabled = false;
-                itemHandler.enabled = false;
-                death = true;
-                torch.SetActive(false);
-                knife.SetActive(false);
-                potion.SetActive(false);
-                //Michael - Testing GameOver script - BEGINNING
+               Debug.Log("Fall");
+               anim.SetBool("IsDying", true);
+               cameraMovement.enabled = false;
+               itemHandler.enabled = false;
+               death = true;
+               torch.SetActive(false);
+               knife.SetActive(false);
+               potion.SetActive(false);
+               //Michael - Testing GameOver script - BEGINNING
                 FindObjectOfType<RestartGame>().GameOver();
-                //Michael - Testing GameOver script - END
+               //Michael - Testing GameOver script - END
             }
-            else
+            else if (jump == true)
             {
                 jump = false;
             }
@@ -91,16 +93,20 @@ public class PlayerMovement : MonoBehaviour
             {
                 FindObjectOfType<SFXManager>().Play("Footsteps");   
             }
-            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D)&& !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.A)  && !Input.GetKeyDown(KeyCode.S)  && !Input.GetKeyDown(KeyCode.D) )
+            if (Input.GetKeyUp(KeyCode.W))
             {
                 FindObjectOfType<SFXManager>().Pause("Footsteps");   
-            }           
+            }            
         }
-        if(!controller.isGrounded)
+
+        if (!controller.isGrounded)
         {
-            jump = true;
-            jumpStart = player.transform.position.y;
-        }
+            Debug.Log(player.transform.position.y);
+           jump = true;
+           jumpStart = player.transform.position.y;
+        }  
+        
+        //=============================HeartBeat=========================================
         if(SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
         {
             wraith = GameObject.FindWithTag("Wraith");
@@ -113,9 +119,8 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log((1/(d-10)) * 10); --- Michael commented out for console spam
             FindObjectOfType<SFXManager>().Volume("HeartBeat", ((1/(d - 10))*10));           
         }
-
+        //================================================================================
         move.y -= gravity * Time.deltaTime;
-
         controller.Move(move * Time.deltaTime);
     }
 
@@ -157,19 +162,19 @@ public class PlayerMovement : MonoBehaviour
             torch.SetActive(false);
             knife.SetActive(false);
             potion.SetActive(false);
-            FindObjectOfType<RestartGame>().GameOver();
+            //FindObjectOfType<RestartGame>().GameOver();
         }
         //--- Michael --- Water Death -- End
     }
     //--- Michael --- Testing respawn -- Start
-    public void playerRespawn()
+    /*public void playerRespawn()
     {
         anim.SetBool("IsDying", false);
         cameraMovement.enabled = true;
         itemHandler.enabled = true;
         death = false;
         
-    }
+    }*/
     //--- Michael --- Testing respawn -- End
 
 
@@ -187,9 +192,7 @@ public class PlayerMovement : MonoBehaviour
             cameraMovement.enabled = true;
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
-        }
-        
-        
+        }               
     }
     //--- Michael --- Testing PauseGame -- End
 }

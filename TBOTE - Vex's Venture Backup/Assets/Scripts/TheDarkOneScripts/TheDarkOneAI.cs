@@ -127,6 +127,11 @@ public class TheDarkOneAI : MonoBehaviour {
         playerInRange = t_playerInRange;
     }
 
+    public bool SetDarkOneDeath()
+    {
+        return theDarkOneDeath;
+    }
+
 
     IEnumerator TheDarkOneSpawn()
     {

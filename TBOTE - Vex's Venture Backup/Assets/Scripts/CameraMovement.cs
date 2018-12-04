@@ -68,8 +68,6 @@ public class CameraMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(6);
         anim.SetBool("IsDying", true);
-
-
         //Michael - Testing GameOver script - BEGINNING
         FindObjectOfType<RestartGame>().GameOver();
         enabled = false;

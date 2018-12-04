@@ -48,7 +48,7 @@ public class TorchScript : MonoBehaviour {
     void Start()
     {
         //setting instance of player class
-        player = playerObject.GetComponent<PlayerClass>();
+       
         //================================
 
         //Turning Torches off=====
@@ -66,6 +66,7 @@ public class TorchScript : MonoBehaviour {
     }
     void OnEnable()
     {
+        player = playerObject.GetComponent<PlayerClass>();
         wait = false;
         player.DimmingofTorch();
     }
