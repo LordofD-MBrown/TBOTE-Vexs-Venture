@@ -55,34 +55,11 @@ public class GuardPatrolling : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (trackPlayer == true && transform.position != player.transform.position)
+        
+
+        if (trackPlayer == false)
         {
-            FindObjectOfType<SFXManager>().Play("GuardFootsteps");
-            guardMovement.destination = player.transform.position;
-
-        }
-
-        if(invisbleHealth == 0)
-        {
-            playerCaught = true;
-        }
-
-        if(playerCaught == true)
-        {
-            s.source.Pause();
-            FindObjectOfType<AudioManager>().Pause("TownTheme");     
-            // FindObjectOfType<SFXManager>().Pause("GuardFootsteps");
-            DontDestroyOnLoad(player);
-            SceneManager.LoadScene("TheVerionianForest(Right)");
-            Vector3 loadPosition = new Vector3(20f, 5.58f, 781.78f);
-            player.transform.position = loadPosition;
-            FindObjectOfType<AudioManager>().Play("ForestTheme");
-        }
-
-        //Debug.Log(posNum);
-
-        if(trackPlayer == false)
-        {
+            
             //FindObjectOfType<SFXManager>().Play("GuardFootsteps");
             if (posNum == 0)
             {
@@ -124,6 +101,31 @@ public class GuardPatrolling : MonoBehaviour
             {
                 guardMovement.destination = pos1.transform.position;
             }
+
+            if (trackPlayer == true && transform.position != player.transform.position)
+            {
+
+                //FindObjectOfType<SFXManager>().Play("GuardFootsteps");
+                guardMovement.destination = player.transform.position;
+
+            }
+
+            if (invisbleHealth == 0)
+            {
+                playerCaught = true;
+            }
+
+            if (playerCaught == true)
+            {
+                //s.source.Pause();
+                //FindObjectOfType<AudioManager>().Pause("TownTheme");
+                // FindObjectOfType<SFXManager>().Pause("GuardFootsteps");
+                DontDestroyOnLoad(player);
+                SceneManager.LoadScene("TheVerionianForest(Right)");
+                Vector3 loadPosition = new Vector3(20f, 5.58f, 781.78f);
+                player.transform.position = loadPosition;
+                //FindObjectOfType<AudioManager>().Play("ForestTheme");
+            }
         }
 
         
@@ -133,19 +135,16 @@ public class GuardPatrolling : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-
-        string name = other.gameObject.name;
-
-        string posName1 = other.gameObject.name;
-        string posName2 = other.gameObject.name;
-        string posName3 = other.gameObject.name;
-        string posName4 = other.gameObject.name;
-        string posName5 = other.gameObject.name;
-        string posName6 = other.gameObject.name;
-        string posName7 = other.gameObject.name;
-        string posName8 = other.gameObject.name;
-        string posName9 = other.gameObject.name;
-        string posName10 = other.gameObject.name;
+        //string posName1 = other.gameObject.name;
+        //string posName2 = other.gameObject.name;
+        //string posName3 = other.gameObject.name;
+        //string posName4 = other.gameObject.name;
+        //string posName5 = other.gameObject.name;
+        //string posName6 = other.gameObject.name;
+        //string posName7 = other.gameObject.name;
+        //string posName8 = other.gameObject.name;
+        //string posName9 = other.gameObject.name;
+        //string posName10 = other.gameObject.name;
 
         if (posNum == 0 && other.tag == "1")
         {
@@ -188,17 +187,18 @@ public class GuardPatrolling : MonoBehaviour
 
 
 
+        string name = other.gameObject.name;
         if (name == "Player")
         {
+            s.source.Play();
             Debug.Log("Player is now being tracked");
             trackPlayer = true;
 
             isRunning = true;
             anim.SetBool("IsRunning", isRunning);
             guardMovement.speed = 6.5f;
-
-
         }
+
 
         if (trackPlayer == true && isRunning == true)
         {
@@ -207,7 +207,7 @@ public class GuardPatrolling : MonoBehaviour
 
 
 
-        
+
 
     }
 }

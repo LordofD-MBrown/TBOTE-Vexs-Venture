@@ -62,14 +62,14 @@ public class GuardAI : MonoBehaviour {
 
         if (playerCaught == true)
         {
-            s.source.Pause();
-            FindObjectOfType<AudioManager>().Pause("TownTheme");
+            //s.source.Pause();
+            //FindObjectOfType<AudioManager>().Pause("TownTheme");
            // FindObjectOfType<SFXManager>().Pause("GuardFootsteps");
             DontDestroyOnLoad(player);
             SceneManager.LoadScene("TheVerionianForest(Right)");
             Vector3 loadPosition = new Vector3(20f, 5.58f, 781.78f);
             player.transform.position = loadPosition;
-            FindObjectOfType<AudioManager>().Play("ForestTheme");
+            //FindObjectOfType<AudioManager>().Play("ForestTheme");
         }
 
     }
