@@ -70,7 +70,7 @@ public class CameraMovement : MonoBehaviour
         anim.SetBool("IsDying", true);
         //Michael - Testing GameOver script - BEGINNING
         FindObjectOfType<RestartGame>().GameOver();
-        enabled = false;
+        //enabled = false;
         //Michael - Testing GameOver script - END
     }
 }

@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
                 jumpEnd = player.transform.position.y;
             }
             Debug.Log(jumpStart - jumpEnd);
-            if (jump == true && (jumpStart - jumpEnd) > .25f) //--- Michael -- Testing range due to death entering forest
+            if (jump == true && (jumpStart - jumpEnd) > .25f)
             {
                Debug.Log("Fall");
                anim.SetBool("IsDying", true);
