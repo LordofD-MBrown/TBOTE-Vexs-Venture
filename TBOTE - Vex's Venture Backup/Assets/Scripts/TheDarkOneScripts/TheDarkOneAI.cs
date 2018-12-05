@@ -12,6 +12,7 @@ public class TheDarkOneAI : MonoBehaviour {
     public GameObject MeleeAttack;
     public GameObject RangeAttack;
     public GameObject Black_Hole;
+    public GameObject Wraiths;
 
    
 
@@ -181,6 +182,7 @@ public class TheDarkOneAI : MonoBehaviour {
     {
         yield return new WaitForSeconds(6f);
         RenderSettings.fog = false;
+        Wraiths.SetActive(false);
         Black_Hole.SetActive(true);
         //gameObject.SetActive(false);
     }

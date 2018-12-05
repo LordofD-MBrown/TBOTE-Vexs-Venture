@@ -70,8 +70,12 @@ public class PlayerMovement : MonoBehaviour
             move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             move = transform.TransformDirection(move);
             move *= speed;   
-            jumpEnd = player.transform.position.y;
-            if (jump == true && jumpStart - jumpEnd > 1f) //--- Michael -- Testing range due to death entering forest
+            if(jump == true)
+            {
+                jumpEnd = player.transform.position.y;
+            }
+            Debug.Log(jumpStart - jumpEnd);
+            if (jump == true && (jumpStart - jumpEnd) > .25f) //--- Michael -- Testing range due to death entering forest
             {
                Debug.Log("Fall");
                anim.SetBool("IsDying", true);
@@ -101,7 +105,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (!controller.isGrounded)
         {
-            Debug.Log(player.transform.position.y);
            jump = true;
            jumpStart = player.transform.position.y;
         }  
@@ -109,15 +112,23 @@ public class PlayerMovement : MonoBehaviour
         //=============================HeartBeat=========================================
         if(SceneManager.GetActiveScene().name == "TheAbbeyofSaintTempes")
         {
-            wraith = GameObject.FindWithTag("Wraith");
+            try
+            {
+                wraith = GameObject.FindWithTag("Wraith");
+                float d = Vector3.Distance(wraith.transform.position, transform.position);
+                //Debug.Log((1/(d-10)) * 10); --- Michael commented out for console spam
+                FindObjectOfType<SFXManager>().Volume("HeartBeat", ((1 / (d - 10)) * 10));
+            }
+            catch
+            {
+                Debug.Log("Error");
+            }
             if (firstpass == false)
             {
                 FindObjectOfType<SFXManager>().Play("HeartBeat");
                 firstpass = true;
             }
-            float d = Vector3.Distance(wraith.transform.position, transform.position);
-            //Debug.Log((1/(d-10)) * 10); --- Michael commented out for console spam
-            FindObjectOfType<SFXManager>().Volume("HeartBeat", ((1/(d - 10))*10));           
+                  
         }
         //================================================================================
         move.y -= gravity * Time.deltaTime;

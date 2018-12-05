@@ -8,11 +8,13 @@ public class Dark_Hole_Script : MonoBehaviour
 
     Vector3 BlackHole;
     CharacterController BlackHoleController;
+    GameObject player;
     public int Expansion_Rate;
 
     void Start()
     {
         BlackHoleController = gameObject.GetComponent<CharacterController>();
+        player = GameObject.Find("Player");
     }
 
     void Update()
@@ -22,13 +24,5 @@ public class Dark_Hole_Script : MonoBehaviour
         BlackHole.y += Time.deltaTime * Expansion_Rate;
         BlackHole.z += Time.deltaTime * Expansion_Rate;
         transform.localScale = BlackHole;
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name != "Player")
-        {
-            Destroy(other.gameObject);
-        }
-    }
-
+    }   
 }
