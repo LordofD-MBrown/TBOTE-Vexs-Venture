@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.077284686, g: 0.07188184, b: 0.05566094, a: 1}
+  m_IndirectSpecularColor: {r: 0.077284746, g: 0.07188179, b: 0.055660814, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -38869,6 +38869,21 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114119604267618926, guid: cf849bab8c4d4424abfecf02b0b4f023,
+        type: 2}
+      propertyPath: volumeSlider
+      value: 
+      objectReference: {fileID: 707275511}
+    - target: {fileID: 114569527837913940, guid: cf849bab8c4d4424abfecf02b0b4f023,
+        type: 2}
+      propertyPath: m_Value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569527837913940, guid: cf849bab8c4d4424abfecf02b0b4f023,
+        type: 2}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf849bab8c4d4424abfecf02b0b4f023, type: 2}
   m_IsPrefabAsset: 0
@@ -38878,6 +38893,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 707275509}
   m_Script: {fileID: 11500000, guid: e32888d211cabc243a869021eda4d061, type: 3}
+--- !u!114 &707275511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114569527837913940, guid: cf849bab8c4d4424abfecf02b0b4f023,
+    type: 2}
+  m_PrefabInternal: {fileID: 707275509}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &710045436
 Prefab:
   m_ObjectHideFlags: 0
@@ -75704,6 +75725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32888d211cabc243a869021eda4d061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 0}
   pauseMenuUI: {fileID: 1566014130}
 --- !u!1001 &970723196
 Prefab:
@@ -134412,6 +134434,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1948852235530992, guid: cf849bab8c4d4424abfecf02b0b4f023,
     type: 2}
   m_PrefabInternal: {fileID: 707275509}
+--- !u!114 &1566014131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1566014130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37d44cd94000e9449202aa1d608a3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 707275511}
 --- !u!224 &1566014135 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224298858529980340, guid: cf849bab8c4d4424abfecf02b0b4f023,

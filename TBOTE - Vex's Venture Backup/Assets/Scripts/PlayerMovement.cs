@@ -176,6 +176,29 @@ public class PlayerMovement : MonoBehaviour
             //FindObjectOfType<RestartGame>().GameOver();
         }
         //--- Michael --- Water Death -- End
+        if (other.gameObject.tag=="rat")
+        {
+            anim.SetBool("IsDying", true);
+            cameraMovement.enabled = false;
+            itemHandler.enabled = false;
+            death = true;
+            torch.SetActive(false);
+            knife.SetActive(false);
+            potion.SetActive(false);
+            FindObjectOfType<RestartGame>().GameOver();
+        }
+        if(other.gameObject.tag=="wolf")
+        {
+            anim.SetBool("IsDying", true);
+            cameraMovement.enabled = false;
+            itemHandler.enabled = false;
+            death = true;
+            torch.SetActive(false);
+            knife.SetActive(false);
+            potion.SetActive(false);
+            FindObjectOfType<RestartGame>().GameOver();
+        }
+        
     }
     //--- Michael --- Testing respawn -- Start
     /*public void playerRespawn()

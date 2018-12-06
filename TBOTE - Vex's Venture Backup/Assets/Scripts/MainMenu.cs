@@ -25,7 +25,10 @@ public class MainMenu : MonoBehaviour
         
         
     }
-	
+	public float getVolume()
+    {
+        return masterVolume;
+    }
     public void QuitGame()
     {
         Debug.Log("Quitting game...");

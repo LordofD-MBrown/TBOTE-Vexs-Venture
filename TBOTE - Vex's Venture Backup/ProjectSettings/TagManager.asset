@@ -24,6 +24,7 @@ TagManager:
   - Win
   - Hole
   - Water
+  - rat
   layers:
   - Default
   - TransparentFX
